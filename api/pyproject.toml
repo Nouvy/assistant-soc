@@ -1,0 +1,21 @@
+[project]
+name = "assistant-soc-api"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.159.1",
+    "google-genai>=2.32.0",
+    "httpx>=0.28.1",
+    "python-dotenv>=1.2.4",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+# Les tests marqués `integration` font un appel réseau réel : exclus par défaut,
+# on les demande avec `uv run pytest -m integration -v`.
+addopts = "-m 'not integration'"

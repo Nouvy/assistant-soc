@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>assistant-soc — test des clients LLM</title>
+  <style>
+    :root {
+      --fond: #f7f5f0;
+      --carte: #fffdf8;
+      --encre: #1f1d1a;
+      --gris: #6b655c;
+      --trait: #e2dcd1;
+      --accent: #8a6d3b;
+      --erreur: #a33a2a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 40px 20px 64px;
+      background: var(--fond); color: var(--encre);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+    .sous-titre { margin: 0 0 28px; color: var(--gris); font-size: 14px; }
+    form {
+      background: var(--carte); border: 1px solid var(--trait);
+      border-radius: 14px; padding: 20px;
+    }
+    label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+    textarea, input[type="text"] {
+      width: 100%; font: inherit; color: inherit;
+      background: #fff; border: 1px solid var(--trait); border-radius: 9px;
+      padding: 11px 12px; resize: vertical;
+    }
+    textarea:focus, input[type="text"]:focus {
+      outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent;
+    }
+    fieldset {
+      border: 0; margin: 0 0 18px; padding: 0;
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    fieldset legend {
+      padding: 0; font-size: 13px; font-weight: 600; margin-bottom: 8px;
+    }
+    .fournisseur label {
+      display: flex; flex-direction: column; gap: 1px;
+      margin: 0; cursor: pointer; font-weight: 500; font-size: 14px;
+      border: 1px solid var(--trait); border-radius: 10px;
+      padding: 9px 14px; background: #fff; min-width: 190px;
+    }
+    .fournisseur input { position: absolute; opacity: 0; pointer-events: none; }
+    .fournisseur label:hover { border-color: var(--accent); }
+    .fournisseur label:has(input:checked) {
+      border-color: var(--accent); background: #f6efe2;
+      box-shadow: inset 0 0 0 1px var(--accent);
+    }
+    .fournisseur label:has(input:focus-visible) {
+      outline: 2px solid var(--accent); outline-offset: 2px;
+    }
+    .fournisseur .nature {
+      font-size: 11px; font-weight: 500; color: var(--gris);
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    details { margin-top: 14px; }
+    summary { cursor: pointer; font-size: 13px; color: var(--gris); }
+    details input { margin-top: 8px; }
+    .barre { display: flex; align-items: center; gap: 14px; margin-top: 16px; }
+    button {
+      font: inherit; font-weight: 600; color: #fff; background: var(--encre);
+      border: 0; border-radius: 9px; padding: 10px 20px; cursor: pointer;
+    }
+    button:disabled { opacity: 0.45; cursor: progress; }
+    button:not(:disabled):hover { background: #34302a; }
+    #etat { font-size: 13px; color: var(--gris); }
+    #erreur {
+      display: none; margin-top: 18px; padding: 12px 14px;
+      border: 1px solid var(--erreur); border-radius: 9px;
+      color: var(--erreur); background: #fdf1ee; font-size: 14px;
+    }
+    #resultat { display: none; margin-top: 20px; }
+    .meta { font-size: 12px; color: var(--gris); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+    .meta span + span::before { content: " · "; }
+    #reponse {
+      margin: 0; padding: 16px; white-space: pre-wrap; overflow-wrap: anywhere;
+      background: var(--carte); border: 1px solid var(--trait);
+      border-left: 3px solid var(--accent); border-radius: 9px;
+    }
+    .note { margin-top: 26px; font-size: 12px; color: var(--gris); }
+    code { font-size: 12px; background: #efeade; padding: 1px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>assistant-soc</h1>
+  <p class="sous-titre">Formulaire de test — envoie une question à un client LLM (<code>POST /chat</code>).</p>
+
+  <form id="formulaire">
+    <fieldset class="fournisseur">
+      <legend>Fournisseur</legend>
+      <label>
+        <input type="radio" name="provider" value="ollama" checked>
+        phi4-mini
+        <span class="nature">local · Ollama</span>
+      </label>
+      <label>
+        <input type="radio" name="provider" value="gemini">
+        gemini-3.5-flash-lite
+        <span class="nature">cloud · Gemini</span>
+      </label>
+    </fieldset>
+
+    <label for="message">Votre question</label>
+    <textarea id="message" name="message" rows="4" required
+      placeholder="Ex. : Un utilisateur signale un courriel demandant ses identifiants. Que vérifier en premier ?"></textarea>
+
+    <details>
+      <summary>Remplacer le prompt système (optionnel)</summary>
+      <label for="system" hidden>Instruction système</label>
+      <input id="system" name="system" type="text"
+        placeholder="Laisser vide pour appliquer les règles analyste SOC.">
+    </details>
+
+    <div class="barre">
+      <button id="envoyer" type="submit">Envoyer</button>
+      <span id="etat" role="status" aria-live="polite"></span>
+    </div>
+  </form>
+
+  <div id="erreur" role="alert"></div>
+
+  <section id="resultat" aria-live="polite">
+    <div class="meta" id="meta"></div>
+    <pre id="reponse"></pre>
+  </section>
+
+  <p class="note">
+    Les deux modèles reçoivent le prompt système analyste SOC (rôle, contexte, contraintes, format),
+    à température 0.1 ; le champ ci-dessus le remplace. <strong>phi4-mini</strong> tourne en local via
+    Ollama sur <code>127.0.0.1:11434</code> — rapide, gratuit, aucune donnée ne sort de la machine.
+    <strong>gemini-3.5-flash-lite</strong> passe par le cloud et exige la clé du <code>.env</code>.
+    En cas de 502, le fournisseur est saturé (Gemini) ou arrêté (Ollama) — réessaie.
+  </p>
+</main>
+
+<script>
+  const formulaire = document.getElementById('formulaire');
+  const bouton = document.getElementById('envoyer');
+  const etat = document.getElementById('etat');
+  const erreur = document.getElementById('erreur');
+  const resultat = document.getElementById('resultat');
+  const meta = document.getElementById('meta');
+  const reponse = document.getElementById('reponse');
+
+  formulaire.addEventListener('submit', async (evenement) => {
+    evenement.preventDefault();
+
+    const message = document.getElementById('message').value.trim();
+    const system = document.getElementById('system').value.trim();
+    const provider = document.querySelector('input[name="provider"]:checked').value;
+    if (!message) return;
+
+    bouton.disabled = true;
+    etat.textContent = `Interrogation de ${provider}…`;
+    erreur.style.display = 'none';
+    resultat.style.display = 'none';
+
+    const debut = performance.now();
+    try {
+      const reponseHttp = await fetch('/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(system ? { message, system, provider } : { message, provider }),
+      });
+      const donnees = await reponseHttp.json();
+
+      if (!reponseHttp.ok) {
+        throw new Error(donnees.detail || `HTTP ${reponseHttp.status}`);
+      }
+
+      const duree = ((performance.now() - debut) / 1000).toFixed(1);
+      meta.replaceChildren(
+        Object.assign(document.createElement('span'), { textContent: donnees.provider }),
+        Object.assign(document.createElement('span'), { textContent: donnees.model }),
+        Object.assign(document.createElement('span'), { textContent: `${donnees.tokens_in} tokens entrée` }),
+        Object.assign(document.createElement('span'), { textContent: `${donnees.tokens_out} tokens sortie` }),
+        Object.assign(document.createElement('span'), { textContent: `${duree} s` })
+      );
+      reponse.textContent = donnees.reply;
+      resultat.style.display = 'block';
+      etat.textContent = '';
+    } catch (probleme) {
+      erreur.textContent = probleme.message;
+      erreur.style.display = 'block';
+      etat.textContent = '';
+    } finally {
+      bouton.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

@@ -16,6 +16,9 @@ venv/
 dist/
 build/
 
+# --- Logs locaux (serveur de dev) ---
+.logs/
+
 # --- Node / frontend ---
 node_modules/
 .vite/
