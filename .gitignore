@@ -1,0 +1,39 @@
+# Freebuff (local chat state)
+.freebuff/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
+# --- Node / frontend ---
+node_modules/
+.vite/
+coverage/
+*.local
+
+# --- Terraform ---
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl
+
+# --- Éditeurs / OS ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
