@@ -1,0 +1,5890 @@
+[
+  {
+    "id": "TKT-0001",
+    "timestamp": "2026-10-31T22:05:22Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "SRV-FILE01",
+    "event": "KB manquante depuis 98 jours sur SRV-FILE01 (Microsoft Exchange 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0032",
+      "CVE-NOUVY-2025-0043",
+      "CVE-NOUVY-2024-0055"
+    ],
+    "product": "Microsoft Exchange 2019"
+  },
+  {
+    "id": "TKT-0002",
+    "timestamp": "2026-10-11T02:00:29Z",
+    "source": "Darktrace",
+    "category": "PowerShell suspect",
+    "host": "SRV-PRINT01",
+    "user": "g.rousseau",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-PRINT01",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0003",
+    "timestamp": "2026-10-01T01:53:49Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "l.diallo",
+    "event": "Modification sensible AD: AdminCount flag changé par l.diallo",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0004",
+    "timestamp": "2026-10-04T00:05:22Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "k.simon",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0005",
+    "timestamp": "2026-10-21T14:58:17Z",
+    "source": "Wazuh",
+    "category": "Brute force RDP",
+    "host": "lin-ci-01",
+    "user": "g.rousseau",
+    "event": "1112 tentatives RDP échouées en moins de 30 minutes sur lin-ci-01",
+    "source_ip": "167.99.123.4",
+    "port": 3389,
+    "failed_attempts": 1112
+  },
+  {
+    "id": "TKT-0006",
+    "timestamp": "2026-10-04T05:34:25Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "SRV-WSUS01",
+    "event": "KB manquante depuis 108 jours sur SRV-WSUS01 (SQL Server 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0001",
+      "CVE-NOUVY-2026-0034"
+    ],
+    "product": "SQL Server 2019"
+  },
+  {
+    "id": "TKT-0007",
+    "timestamp": "2026-10-10T09:13:27Z",
+    "source": "Darktrace",
+    "category": "PowerShell suspect",
+    "host": "WKS-RH01",
+    "user": "o.fontaine",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-RH01",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0008",
+    "timestamp": "2026-10-11T19:14:40Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "o.fontaine",
+    "event": "Modification sensible AD: AdminCount flag changé par o.fontaine",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0009",
+    "timestamp": "2026-10-07T15:20:11Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA01",
+    "user": "o.fontaine",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0010",
+    "timestamp": "2026-10-06T21:49:35Z",
+    "source": "Splunk ES",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WEB01",
+    "user": "g.rousseau",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0011",
+    "timestamp": "2026-10-16T19:54:49Z",
+    "source": "Elastic SIEM",
+    "category": "Brute force RDP",
+    "host": "SRV-FILE01",
+    "user": "admin",
+    "event": "551 tentatives RDP échouées en moins de 30 minutes sur SRV-FILE01",
+    "source_ip": "91.189.189.42",
+    "port": 3389,
+    "failed_attempts": 551
+  },
+  {
+    "id": "TKT-0012",
+    "timestamp": "2026-10-18T15:03:40Z",
+    "source": "Splunk ES",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-RH01",
+    "user": "svc_sql",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0013",
+    "timestamp": "2026-10-14T15:01:24Z",
+    "source": "SentinelOne",
+    "category": "Brute force RDP",
+    "host": "WKS-DIR01",
+    "user": "admin",
+    "event": "608 tentatives RDP échouées en moins de 30 minutes sur WKS-DIR01",
+    "source_ip": "162.158.78.5",
+    "port": 3389,
+    "failed_attempts": 608
+  },
+  {
+    "id": "TKT-0014",
+    "timestamp": "2026-10-28T21:49:47Z",
+    "source": "Splunk ES",
+    "category": "Brute force RDP",
+    "host": "SRV-DC01",
+    "user": "o.fontaine",
+    "event": "1209 tentatives RDP échouées en moins de 30 minutes sur SRV-DC01",
+    "source_ip": "198.51.100.17",
+    "port": 3389,
+    "failed_attempts": 1209
+  },
+  {
+    "id": "TKT-0015",
+    "timestamp": "2026-10-08T02:21:01Z",
+    "source": "Darktrace",
+    "category": "PowerShell suspect",
+    "host": "SRV-FILE02",
+    "user": "r.thomas",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-FILE02",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0016",
+    "timestamp": "2026-10-17T20:07:33Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "WKS-COMPTA01",
+    "event": "Scan de 49 ports détecté vers WKS-COMPTA01 en moins de 2 minutes",
+    "source_ip": "91.189.189.42",
+    "scanned_ports": 49
+  },
+  {
+    "id": "TKT-0017",
+    "timestamp": "2026-10-06T15:22:33Z",
+    "source": "Trellix EDR",
+    "category": "C2 beaconing",
+    "host": "SRV-WSUS01",
+    "event": "Communications régulières (toutes les 41s) détectées depuis SRV-WSUS01 vers IP externe",
+    "destination_ip": "92.63.197.8",
+    "destination_port": 8080,
+    "beacon_interval_s": 41
+  },
+  {
+    "id": "TKT-0018",
+    "timestamp": "2026-10-31T21:21:16Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM05",
+    "user": "r.thomas",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0019",
+    "timestamp": "2026-10-17T20:46:39Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "lin-ci-01",
+    "event": "KB manquante depuis 33 jours sur lin-ci-01 (Debian 12)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0009",
+      "CVE-NOUVY-2025-0067"
+    ],
+    "product": "Debian 12"
+  },
+  {
+    "id": "TKT-0020",
+    "timestamp": "2026-10-08T09:54:45Z",
+    "source": "Wazuh",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM05",
+    "user": "f.laurent",
+    "event": "RMM TeamViewer utilisé par le support IT",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0021",
+    "timestamp": "2026-10-07T14:06:08Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM05",
+    "user": "o.fontaine",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0022",
+    "timestamp": "2026-10-18T19:09:17Z",
+    "source": "Elastic SIEM",
+    "category": "C2 beaconing",
+    "host": "SRV-SQL01",
+    "event": "Communications régulières (toutes les 579s) détectées depuis SRV-SQL01 vers IP externe",
+    "destination_ip": "198.51.100.17",
+    "destination_port": 443,
+    "beacon_interval_s": 579
+  },
+  {
+    "id": "TKT-0023",
+    "timestamp": "2026-10-14T04:02:19Z",
+    "source": "SentinelOne",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMPTA02",
+    "user": "s.lopez",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMPTA02",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0024",
+    "timestamp": "2026-10-10T18:46:36Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "WKS-MKT02",
+    "event": "KB manquante depuis 48 jours sur WKS-MKT02 (SQL Server 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0018",
+      "CVE-NOUVY-2024-0061",
+      "CVE-NOUVY-2024-0016"
+    ],
+    "product": "SQL Server 2019"
+  },
+  {
+    "id": "TKT-0025",
+    "timestamp": "2026-10-10T22:18:44Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "SRV-FILE01",
+    "user": "admin",
+    "event": "524 tentatives RDP échouées en moins de 30 minutes sur SRV-FILE01",
+    "source_ip": "92.63.197.8",
+    "port": 3389,
+    "failed_attempts": 524
+  },
+  {
+    "id": "TKT-0026",
+    "timestamp": "2026-10-16T17:50:31Z",
+    "source": "Splunk ES",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "svc_ad",
+    "event": "Modification sensible AD: msDS-AllowedToDelegateTo changé par svc_ad",
+    "attribute_changed": "msDS-AllowedToDelegateTo"
+  },
+  {
+    "id": "TKT-0027",
+    "timestamp": "2026-10-19T20:17:40Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-RH01",
+    "user": "administrator",
+    "event": "Mise à jour légitime Adobe Reader bloquée",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0028",
+    "timestamp": "2026-10-15T11:03:39Z",
+    "source": "Darktrace",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-DC01",
+    "user": "n.bernard",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0029",
+    "timestamp": "2026-10-19T07:45:09Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "SRV-DC01",
+    "user": "r.thomas",
+    "event": "Utilisateur r.thomas a cliqué sur un lien malveillant depuis SRV-DC01",
+    "url_clicked": "https://sharefile-document-view.com/login",
+    "sender": "no-reply@sharefile-document-view.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0030",
+    "timestamp": "2026-10-31T22:33:29Z",
+    "source": "Splunk ES",
+    "category": "Brute force RDP",
+    "host": "WKS-COMPTA02",
+    "user": "admin",
+    "event": "1696 tentatives RDP échouées en moins de 30 minutes sur WKS-COMPTA02",
+    "source_ip": "45.137.21.9",
+    "port": 3389,
+    "failed_attempts": 1696
+  },
+  {
+    "id": "TKT-0031",
+    "timestamp": "2026-10-23T14:31:10Z",
+    "source": "Elastic SIEM",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-DEV03",
+    "user": "administrator",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0032",
+    "timestamp": "2026-10-14T05:39:08Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA02",
+    "user": "o.fontaine",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0033",
+    "timestamp": "2026-10-09T06:15:44Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "j.martin",
+    "event": "Modification sensible AD: msDS-AllowedToDelegateTo changé par j.martin",
+    "attribute_changed": "msDS-AllowedToDelegateTo"
+  },
+  {
+    "id": "TKT-0034",
+    "timestamp": "2026-10-03T23:31:52Z",
+    "source": "Elastic SIEM",
+    "category": "PowerShell suspect",
+    "host": "SRV-EXCH01",
+    "user": "r.thomas",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-EXCH01",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0035",
+    "timestamp": "2026-10-30T02:43:59Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM05",
+    "user": "p.henri",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0036",
+    "timestamp": "2026-10-15T20:53:23Z",
+    "source": "Wazuh",
+    "category": "PowerShell suspect",
+    "host": "WKS-RH01",
+    "user": "svc_ad",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-RH01",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0037",
+    "timestamp": "2026-10-28T21:56:19Z",
+    "source": "Microsoft Sentinel",
+    "category": "C2 beaconing",
+    "host": "WKS-SUPPORT04",
+    "event": "Communications régulières (toutes les 57s) détectées depuis WKS-SUPPORT04 vers IP externe",
+    "destination_ip": "167.99.233.17",
+    "destination_port": 8443,
+    "beacon_interval_s": 57
+  },
+  {
+    "id": "TKT-0038",
+    "timestamp": "2026-10-05T22:42:06Z",
+    "source": "Elastic SIEM",
+    "category": "Autre",
+    "host": "lin-nginx-01",
+    "user": "r.thomas",
+    "event": "Pic de connexions VPN depuis l'étranger (3 pays simultanés)"
+  },
+  {
+    "id": "TKT-0039",
+    "timestamp": "2026-10-16T22:58:51Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Brute force RDP",
+    "host": "lin-k8s-01",
+    "user": "admin",
+    "event": "1575 tentatives RDP échouées en moins de 30 minutes sur lin-k8s-01",
+    "source_ip": "167.99.123.4",
+    "port": 3389,
+    "failed_attempts": 1575
+  },
+  {
+    "id": "TKT-0040",
+    "timestamp": "2026-10-22T07:49:18Z",
+    "source": "Elastic SIEM",
+    "category": "PowerShell suspect",
+    "host": "SRV-FILE01",
+    "user": "f.laurent",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-FILE01",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0041",
+    "timestamp": "2026-10-20T12:39:25Z",
+    "source": "Darktrace",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM12",
+    "user": "y.perrin",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0042",
+    "timestamp": "2026-10-06T05:13:51Z",
+    "source": "Microsoft Sentinel",
+    "category": "Autre",
+    "host": "SRV-WSUS01",
+    "user": "s.lopez",
+    "event": "Certificat auto-signé déployé sur un service public"
+  },
+  {
+    "id": "TKT-0043",
+    "timestamp": "2026-10-23T09:25:42Z",
+    "source": "SentinelOne",
+    "category": "PowerShell suspect",
+    "host": "SRV-WEB01",
+    "user": "admin",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-WEB01",
+    "process_tree": [
+      "svchost.exe",
+      "powershell.exe",
+      "wscript.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0044",
+    "timestamp": "2026-10-16T20:38:04Z",
+    "source": "Trellix EDR",
+    "category": "C2 beaconing",
+    "host": "SRV-EXCH01",
+    "event": "Communications régulières (toutes les 276s) détectées depuis SRV-EXCH01 vers IP externe",
+    "destination_ip": "185.220.101.5",
+    "destination_port": 4444,
+    "beacon_interval_s": 276
+  },
+  {
+    "id": "TKT-0045",
+    "timestamp": "2026-10-08T21:15:17Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "l.diallo",
+    "event": "Modification sensible AD: AdminCount flag changé par l.diallo",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0046",
+    "timestamp": "2026-10-09T11:55:52Z",
+    "source": "Elastic SIEM",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-PRINT01",
+    "user": "s.lopez",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0047",
+    "timestamp": "2026-10-11T05:56:24Z",
+    "source": "Wazuh",
+    "category": "Autre",
+    "host": "SRV-APP01",
+    "user": "r.thomas",
+    "event": "Clé USB inconnue connectée sur un poste de direction"
+  },
+  {
+    "id": "TKT-0048",
+    "timestamp": "2026-10-10T06:49:08Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Scan de port",
+    "host": "SRV-DC01",
+    "event": "Scan de 114 ports détecté vers SRV-DC01 en moins de 2 minutes",
+    "source_ip": "198.51.100.17",
+    "scanned_ports": 114
+  },
+  {
+    "id": "TKT-0049",
+    "timestamp": "2026-10-27T19:24:51Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-DC01",
+    "user": "svc_sql",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0050",
+    "timestamp": "2026-10-08T15:01:39Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "SRV-WEB01",
+    "user": "admin",
+    "event": "1432 tentatives RDP échouées en moins de 30 minutes sur SRV-WEB01",
+    "source_ip": "193.142.146.198",
+    "port": 3389,
+    "failed_attempts": 1432
+  },
+  {
+    "id": "TKT-0051",
+    "timestamp": "2026-10-22T14:02:08Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "SRV-APP01",
+    "user": "j.martin",
+    "event": "Utilisateur j.martin a cliqué sur un lien malveillant depuis SRV-APP01",
+    "url_clicked": "https://sharefile-document-view.com/login",
+    "sender": "no-reply@sharefile-document-view.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0052",
+    "timestamp": "2026-10-28T12:22:59Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "g.rousseau",
+    "event": "Modification sensible AD: AdminCount flag changé par g.rousseau",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0053",
+    "timestamp": "2026-10-21T11:19:16Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-RH01",
+    "user": "admin",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0054",
+    "timestamp": "2026-10-06T14:53:34Z",
+    "source": "CrowdStrike Falcon",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMPTA02",
+    "user": "o.fontaine",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMPTA02",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0055",
+    "timestamp": "2026-10-25T01:48:46Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA02",
+    "user": "r.thomas",
+    "event": "RMM TeamViewer utilisé par le support IT",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0056",
+    "timestamp": "2026-10-27T17:57:32Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "SRV-EXCH01",
+    "event": "KB manquante depuis 88 jours sur SRV-EXCH01 (Windows Server 2022)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0043",
+      "CVE-NOUVY-2025-0004"
+    ],
+    "product": "Windows Server 2022"
+  },
+  {
+    "id": "TKT-0057",
+    "timestamp": "2026-10-05T20:14:04Z",
+    "source": "Wazuh",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-DC02",
+    "user": "j.martin",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0058",
+    "timestamp": "2026-10-28T11:35:59Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "SRV-DC02",
+    "user": "p.henri",
+    "event": "Utilisateur p.henri a cliqué sur un lien malveillant depuis SRV-DC02",
+    "url_clicked": "https://support-france-impots.net/login",
+    "sender": "no-reply@support-france-impots.net",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0059",
+    "timestamp": "2026-10-14T20:06:53Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Scan de port",
+    "host": "SRV-PRINT01",
+    "event": "Scan de 463 ports détecté vers SRV-PRINT01 en moins de 2 minutes",
+    "source_ip": "80.82.78.202",
+    "scanned_ports": 463
+  },
+  {
+    "id": "TKT-0060",
+    "timestamp": "2026-10-23T02:19:35Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Scan de port",
+    "host": "SRV-WSUS01",
+    "event": "Scan de 314 ports détecté vers SRV-WSUS01 en moins de 2 minutes",
+    "source_ip": "198.51.100.42",
+    "scanned_ports": 314
+  },
+  {
+    "id": "TKT-0061",
+    "timestamp": "2026-10-23T02:36:06Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WEB01",
+    "user": "p.henri",
+    "event": "RMM TeamViewer utilisé par le support IT",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0062",
+    "timestamp": "2026-10-03T04:20:41Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "WKS-DEV03",
+    "user": "svc_ldap",
+    "event": "Utilisateur svc_ldap a cliqué sur un lien malveillant depuis WKS-DEV03",
+    "url_clicked": "https://sharefile-document-view.com/login",
+    "sender": "no-reply@sharefile-document-view.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0063",
+    "timestamp": "2026-10-28T22:20:46Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "SRV-PRINT01",
+    "event": "KB manquante depuis 66 jours sur SRV-PRINT01 (SQL Server 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0035",
+      "CVE-NOUVY-2025-0015"
+    ],
+    "product": "SQL Server 2019"
+  },
+  {
+    "id": "TKT-0064",
+    "timestamp": "2026-10-06T09:35:00Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "WKS-COMM05",
+    "user": "administrator",
+    "event": "1503 tentatives RDP échouées en moins de 30 minutes sur WKS-COMM05",
+    "source_ip": "91.223.82.5",
+    "port": 3389,
+    "failed_attempts": 1503
+  },
+  {
+    "id": "TKT-0065",
+    "timestamp": "2026-10-22T04:15:18Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Exfiltration DNS",
+    "host": "SRV-FILE02",
+    "event": "Volume anormal de requêtes DNS TXT (227 Mo en 1h) depuis SRV-FILE02",
+    "domain_pattern": "*.c2.badcorp.net",
+    "volume_mb": 227
+  },
+  {
+    "id": "TKT-0066",
+    "timestamp": "2026-10-17T11:39:48Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "SRV-FILE02",
+    "user": "y.perrin",
+    "event": "434 tentatives RDP échouées en moins de 30 minutes sur SRV-FILE02",
+    "source_ip": "185.220.101.33",
+    "port": 3389,
+    "failed_attempts": 434
+  },
+  {
+    "id": "TKT-0067",
+    "timestamp": "2026-10-10T10:29:50Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-FILE02",
+    "user": "m.dupont",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0068",
+    "timestamp": "2026-10-23T14:28:33Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "SRV-FILE01",
+    "event": "Scan de 136 ports détecté vers SRV-FILE01 en moins de 2 minutes",
+    "source_ip": "45.148.10.33",
+    "scanned_ports": 136
+  },
+  {
+    "id": "TKT-0069",
+    "timestamp": "2026-10-24T08:15:14Z",
+    "source": "Wazuh",
+    "category": "PowerShell suspect",
+    "host": "SRV-FILE02",
+    "user": "l.diallo",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-FILE02",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0070",
+    "timestamp": "2026-10-09T02:46:27Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMPTA02",
+    "user": "administrator",
+    "event": "Utilisateur administrator a cliqué sur un lien malveillant depuis WKS-COMPTA02",
+    "url_clicked": "https://sharefile-document-view.com/login",
+    "sender": "no-reply@sharefile-document-view.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0071",
+    "timestamp": "2026-10-12T20:42:24Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "administrator",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0072",
+    "timestamp": "2026-10-27T07:43:19Z",
+    "source": "Microsoft Sentinel",
+    "category": "Brute force RDP",
+    "host": "lin-k8s-02",
+    "user": "admin",
+    "event": "241 tentatives RDP échouées en moins de 30 minutes sur lin-k8s-02",
+    "source_ip": "185.220.101.5",
+    "port": 3389,
+    "failed_attempts": 241
+  },
+  {
+    "id": "TKT-0073",
+    "timestamp": "2026-10-16T03:28:46Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM12",
+    "user": "administrator",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0074",
+    "timestamp": "2026-10-13T02:56:29Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Exfiltration DNS",
+    "host": "SRV-FILE01",
+    "event": "Volume anormal de requêtes DNS TXT (493 Mo en 1h) depuis SRV-FILE01",
+    "domain_pattern": "*.c2.badcorp.net",
+    "volume_mb": 493
+  },
+  {
+    "id": "TKT-0075",
+    "timestamp": "2026-10-08T02:59:27Z",
+    "source": "Elastic SIEM",
+    "category": "C2 beaconing",
+    "host": "WKS-COMM05",
+    "event": "Communications régulières (toutes les 89s) détectées depuis WKS-COMM05 vers IP externe",
+    "destination_ip": "162.158.78.5",
+    "destination_port": 8443,
+    "beacon_interval_s": 89
+  },
+  {
+    "id": "TKT-0076",
+    "timestamp": "2026-10-25T23:08:50Z",
+    "source": "Elastic SIEM",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "svc_backup",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0077",
+    "timestamp": "2026-10-05T22:52:25Z",
+    "source": "Elastic SIEM",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-DC01",
+    "user": "n.bernard",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0078",
+    "timestamp": "2026-10-19T19:02:39Z",
+    "source": "Elastic SIEM",
+    "category": "PowerShell suspect",
+    "host": "SRV-FILE02",
+    "user": "svc_ldap",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-FILE02",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0079",
+    "timestamp": "2026-10-06T08:05:41Z",
+    "source": "SentinelOne",
+    "category": "C2 beaconing",
+    "host": "SRV-WSUS01",
+    "event": "Communications régulières (toutes les 339s) détectées depuis SRV-WSUS01 vers IP externe",
+    "destination_ip": "92.63.197.8",
+    "destination_port": 443,
+    "beacon_interval_s": 339
+  },
+  {
+    "id": "TKT-0080",
+    "timestamp": "2026-10-11T00:48:42Z",
+    "source": "Darktrace",
+    "category": "Exfiltration DNS",
+    "host": "SRV-DC01",
+    "event": "Volume anormal de requêtes DNS TXT (491 Mo en 1h) depuis SRV-DC01",
+    "domain_pattern": "*.beacon.darkweb.io",
+    "volume_mb": 491
+  },
+  {
+    "id": "TKT-0081",
+    "timestamp": "2026-10-22T05:10:11Z",
+    "source": "Elastic SIEM",
+    "category": "Brute force RDP",
+    "host": "lin-mail-01",
+    "user": "o.fontaine",
+    "event": "1209 tentatives RDP échouées en moins de 30 minutes sur lin-mail-01",
+    "source_ip": "91.223.82.5",
+    "port": 3389,
+    "failed_attempts": 1209
+  },
+  {
+    "id": "TKT-0082",
+    "timestamp": "2026-10-08T16:11:35Z",
+    "source": "Wazuh",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-FILE02",
+    "user": "a.chen",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0083",
+    "timestamp": "2026-10-23T09:41:26Z",
+    "source": "Elastic SIEM",
+    "category": "Brute force RDP",
+    "host": "lin-ansible-01",
+    "user": "administrator",
+    "event": "1912 tentatives RDP échouées en moins de 30 minutes sur lin-ansible-01",
+    "source_ip": "185.220.101.33",
+    "port": 3389,
+    "failed_attempts": 1912
+  },
+  {
+    "id": "TKT-0084",
+    "timestamp": "2026-10-21T18:14:34Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "SRV-FILE02",
+    "event": "KB manquante depuis 37 jours sur SRV-FILE02 (Windows 11 23H2)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0046",
+      "CVE-NOUVY-2024-0010",
+      "CVE-NOUVY-2025-0022",
+      "CVE-NOUVY-2025-0047"
+    ],
+    "product": "Windows 11 23H2"
+  },
+  {
+    "id": "TKT-0085",
+    "timestamp": "2026-10-08T12:05:46Z",
+    "source": "Elastic SIEM",
+    "category": "C2 beaconing",
+    "host": "lin-ci-01",
+    "event": "Communications régulières (toutes les 102s) détectées depuis lin-ci-01 vers IP externe",
+    "destination_ip": "45.137.21.9",
+    "destination_port": 4444,
+    "beacon_interval_s": 102
+  },
+  {
+    "id": "TKT-0086",
+    "timestamp": "2026-10-03T05:27:28Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WSUS01",
+    "user": "l.diallo",
+    "event": "Mise à jour légitime Adobe Reader bloquée",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0087",
+    "timestamp": "2026-10-05T18:42:25Z",
+    "source": "Elastic SIEM",
+    "category": "Scan de port",
+    "host": "WKS-COMPTA02",
+    "event": "Scan de 455 ports détecté vers WKS-COMPTA02 en moins de 2 minutes",
+    "source_ip": "45.142.212.17",
+    "scanned_ports": 455
+  },
+  {
+    "id": "TKT-0088",
+    "timestamp": "2026-10-15T10:11:03Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Brute force RDP",
+    "host": "lin-ci-01",
+    "user": "administrator",
+    "event": "1030 tentatives RDP échouées en moins de 30 minutes sur lin-ci-01",
+    "source_ip": "193.142.146.198",
+    "port": 3389,
+    "failed_attempts": 1030
+  },
+  {
+    "id": "TKT-0089",
+    "timestamp": "2026-10-17T21:57:03Z",
+    "source": "BloxOne",
+    "category": "Exfiltration DNS",
+    "host": "lin-postgres-01",
+    "event": "Volume anormal de requêtes DNS TXT (66 Mo en 1h) depuis lin-postgres-01",
+    "domain_pattern": "*.data.evil-exfil.com",
+    "volume_mb": 66
+  },
+  {
+    "id": "TKT-0090",
+    "timestamp": "2026-10-29T01:00:19Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "WKS-COMPTA02",
+    "event": "KB manquante depuis 57 jours sur WKS-COMPTA02 (Microsoft Exchange 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0037",
+      "CVE-NOUVY-2026-0005",
+      "CVE-NOUVY-2025-0060"
+    ],
+    "product": "Microsoft Exchange 2019"
+  },
+  {
+    "id": "TKT-0091",
+    "timestamp": "2026-10-27T22:41:21Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMPTA01",
+    "user": "j.martin",
+    "event": "Utilisateur j.martin a cliqué sur un lien malveillant depuis WKS-COMPTA01",
+    "url_clicked": "https://login-office365-security.com/login",
+    "sender": "no-reply@login-office365-security.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0092",
+    "timestamp": "2026-10-03T05:00:26Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "WKS-COMPTA02",
+    "user": "o.fontaine",
+    "event": "1180 tentatives RDP échouées en moins de 30 minutes sur WKS-COMPTA02",
+    "source_ip": "198.51.100.17",
+    "port": 3389,
+    "failed_attempts": 1180
+  },
+  {
+    "id": "TKT-0093",
+    "timestamp": "2026-10-11T23:04:15Z",
+    "source": "Splunk ES",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "m.dupont",
+    "event": "Modification sensible AD: msDS-AllowedToDelegateTo changé par m.dupont",
+    "attribute_changed": "msDS-AllowedToDelegateTo"
+  },
+  {
+    "id": "TKT-0094",
+    "timestamp": "2026-10-19T11:36:18Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Brute force RDP",
+    "host": "WKS-COMM05",
+    "user": "j.martin",
+    "event": "831 tentatives RDP échouées en moins de 30 minutes sur WKS-COMM05",
+    "source_ip": "92.63.197.8",
+    "port": 3389,
+    "failed_attempts": 831
+  },
+  {
+    "id": "TKT-0095",
+    "timestamp": "2026-10-12T07:46:42Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMPTA02",
+    "user": "j.martin",
+    "event": "Utilisateur j.martin a cliqué sur un lien malveillant depuis WKS-COMPTA02",
+    "url_clicked": "https://login-office365-security.com/login",
+    "sender": "no-reply@login-office365-security.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0096",
+    "timestamp": "2026-10-02T11:34:21Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMPTA01",
+    "user": "g.rousseau",
+    "event": "Utilisateur g.rousseau a cliqué sur un lien malveillant depuis WKS-COMPTA01",
+    "url_clicked": "https://microsft-support-portal.net/login",
+    "sender": "no-reply@microsft-support-portal.net",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0097",
+    "timestamp": "2026-10-14T05:29:00Z",
+    "source": "CrowdStrike Falcon",
+    "category": "PowerShell suspect",
+    "host": "SRV-FILE02",
+    "user": "k.simon",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-FILE02",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0098",
+    "timestamp": "2026-10-04T09:26:58Z",
+    "source": "Elastic SIEM",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA02",
+    "user": "j.martin",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0099",
+    "timestamp": "2026-10-27T00:39:09Z",
+    "source": "Microsoft Sentinel",
+    "category": "Brute force RDP",
+    "host": "WKS-COMM05",
+    "user": "m.dupont",
+    "event": "458 tentatives RDP échouées en moins de 30 minutes sur WKS-COMM05",
+    "source_ip": "45.137.21.9",
+    "port": 3389,
+    "failed_attempts": 458
+  },
+  {
+    "id": "TKT-0100",
+    "timestamp": "2026-10-08T13:54:35Z",
+    "source": "Darktrace",
+    "category": "Scan de port",
+    "host": "WKS-MKT02",
+    "event": "Scan de 303 ports détecté vers WKS-MKT02 en moins de 2 minutes",
+    "source_ip": "165.227.195.102",
+    "scanned_ports": 303
+  },
+  {
+    "id": "TKT-0101",
+    "timestamp": "2026-10-08T03:01:47Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMPTA01",
+    "user": "svc_sql",
+    "event": "Utilisateur svc_sql a cliqué sur un lien malveillant depuis WKS-COMPTA01",
+    "url_clicked": "https://docusign-reader-pdf.com/login",
+    "sender": "no-reply@docusign-reader-pdf.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0102",
+    "timestamp": "2026-10-27T03:33:09Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMM12",
+    "user": "svc_ldap",
+    "event": "Utilisateur svc_ldap a cliqué sur un lien malveillant depuis WKS-COMM12",
+    "url_clicked": "https://login-office365-security.com/login",
+    "sender": "no-reply@login-office365-security.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0103",
+    "timestamp": "2026-10-18T18:23:29Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "SRV-DC01",
+    "user": "administrator",
+    "event": "Utilisateur administrator a cliqué sur un lien malveillant depuis SRV-DC01",
+    "url_clicked": "https://docusign-reader-pdf.com/login",
+    "sender": "no-reply@docusign-reader-pdf.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0104",
+    "timestamp": "2026-10-10T05:25:43Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "SRV-EXCH01",
+    "event": "KB manquante depuis 103 jours sur SRV-EXCH01 (Cisco ASA)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0004"
+    ],
+    "product": "Cisco ASA"
+  },
+  {
+    "id": "TKT-0105",
+    "timestamp": "2026-10-10T20:45:32Z",
+    "source": "Microsoft Defender XDR",
+    "category": "C2 beaconing",
+    "host": "lin-grafana-01",
+    "event": "Communications régulières (toutes les 548s) détectées depuis lin-grafana-01 vers IP externe",
+    "destination_ip": "80.82.78.202",
+    "destination_port": 53,
+    "beacon_interval_s": 548
+  },
+  {
+    "id": "TKT-0106",
+    "timestamp": "2026-10-11T07:24:36Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-PRINT01",
+    "user": "m.dupont",
+    "event": "Mise à jour légitime Adobe Reader bloquée",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0107",
+    "timestamp": "2026-10-19T22:58:09Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "m.dupont",
+    "event": "Modification sensible AD: membership of Domain Admins changé par m.dupont",
+    "attribute_changed": "membership of Domain Admins"
+  },
+  {
+    "id": "TKT-0108",
+    "timestamp": "2026-10-03T12:57:54Z",
+    "source": "Splunk ES",
+    "category": "Autre",
+    "host": "SRV-PRINT01",
+    "user": "l.diallo",
+    "event": "Baseline de performance CPU dépassée de 400%"
+  },
+  {
+    "id": "TKT-0109",
+    "timestamp": "2026-10-28T03:32:49Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "SRV-APP01",
+    "event": "Scan de 161 ports détecté vers SRV-APP01 en moins de 2 minutes",
+    "source_ip": "167.99.233.17",
+    "scanned_ports": 161
+  },
+  {
+    "id": "TKT-0110",
+    "timestamp": "2026-10-04T23:30:48Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM12",
+    "user": "administrator",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0111",
+    "timestamp": "2026-10-07T15:04:08Z",
+    "source": "Darktrace",
+    "category": "C2 beaconing",
+    "host": "SRV-WEB01",
+    "event": "Communications régulières (toutes les 31s) détectées depuis SRV-WEB01 vers IP externe",
+    "destination_ip": "91.223.82.5",
+    "destination_port": 8443,
+    "beacon_interval_s": 31
+  },
+  {
+    "id": "TKT-0112",
+    "timestamp": "2026-10-04T18:32:13Z",
+    "source": "Wazuh",
+    "category": "Scan de port",
+    "host": "LAPTOP-SALES07",
+    "event": "Scan de 190 ports détecté vers LAPTOP-SALES07 en moins de 2 minutes",
+    "source_ip": "167.99.123.4",
+    "scanned_ports": 190
+  },
+  {
+    "id": "TKT-0113",
+    "timestamp": "2026-10-01T13:01:14Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Exfiltration DNS",
+    "host": "WKS-COMM05",
+    "event": "Volume anormal de requêtes DNS TXT (82 Mo en 1h) depuis WKS-COMM05",
+    "domain_pattern": "*.beacon.darkweb.io",
+    "volume_mb": 82
+  },
+  {
+    "id": "TKT-0114",
+    "timestamp": "2026-10-24T17:21:22Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "lin-nginx-01",
+    "user": "user1",
+    "event": "921 tentatives RDP échouées en moins de 30 minutes sur lin-nginx-01",
+    "source_ip": "92.63.197.8",
+    "port": 3389,
+    "failed_attempts": 921
+  },
+  {
+    "id": "TKT-0115",
+    "timestamp": "2026-10-15T21:13:32Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "lin-ansible-01",
+    "user": "administrator",
+    "event": "954 tentatives RDP échouées en moins de 30 minutes sur lin-ansible-01",
+    "source_ip": "198.51.100.17",
+    "port": 3389,
+    "failed_attempts": 954
+  },
+  {
+    "id": "TKT-0116",
+    "timestamp": "2026-10-07T10:19:58Z",
+    "source": "Splunk ES",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "n.bernard",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0117",
+    "timestamp": "2026-10-04T01:29:03Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "svc_backup",
+    "event": "Modification sensible AD: membership of Domain Admins changé par svc_backup",
+    "attribute_changed": "membership of Domain Admins"
+  },
+  {
+    "id": "TKT-0118",
+    "timestamp": "2026-10-30T02:06:49Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "o.fontaine",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0119",
+    "timestamp": "2026-10-21T01:33:02Z",
+    "source": "Elastic SIEM",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM05",
+    "user": "a.chen",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0120",
+    "timestamp": "2026-10-03T21:58:21Z",
+    "source": "Darktrace",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMPTA02",
+    "user": "svc_backup",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMPTA02",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0121",
+    "timestamp": "2026-10-21T15:30:41Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "WKS-COMPTA01",
+    "event": "KB manquante depuis 111 jours sur WKS-COMPTA01 (Fortinet FortiGate)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0003",
+      "CVE-NOUVY-2024-0074",
+      "CVE-NOUVY-2026-0006"
+    ],
+    "product": "Fortinet FortiGate"
+  },
+  {
+    "id": "TKT-0122",
+    "timestamp": "2026-10-20T07:29:23Z",
+    "source": "Darktrace",
+    "category": "Exfiltration DNS",
+    "host": "LAPTOP-SALES07",
+    "event": "Volume anormal de requêtes DNS TXT (383 Mo en 1h) depuis LAPTOP-SALES07",
+    "domain_pattern": "*.data.evil-exfil.com",
+    "volume_mb": 383
+  },
+  {
+    "id": "TKT-0123",
+    "timestamp": "2026-10-30T21:53:44Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Scan de port",
+    "host": "SRV-DC02",
+    "event": "Scan de 321 ports détecté vers SRV-DC02 en moins de 2 minutes",
+    "source_ip": "185.220.101.5",
+    "scanned_ports": 321
+  },
+  {
+    "id": "TKT-0124",
+    "timestamp": "2026-10-04T15:50:55Z",
+    "source": "Darktrace",
+    "category": "Autre",
+    "host": "WKS-DIR01",
+    "user": "a.chen",
+    "event": "GPO modifiée hors fenêtre de maintenance"
+  },
+  {
+    "id": "TKT-0125",
+    "timestamp": "2026-10-23T20:44:34Z",
+    "source": "Microsoft Defender XDR",
+    "category": "PowerShell suspect",
+    "host": "WKS-MKT02",
+    "user": "f.laurent",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-MKT02",
+    "process_tree": [
+      "svchost.exe",
+      "powershell.exe",
+      "wscript.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0126",
+    "timestamp": "2026-10-20T20:57:25Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "WKS-RH01",
+    "event": "KB manquante depuis 80 jours sur WKS-RH01 (Debian 12)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0023",
+      "CVE-NOUVY-2025-0023",
+      "CVE-NOUVY-2026-0012"
+    ],
+    "product": "Debian 12"
+  },
+  {
+    "id": "TKT-0127",
+    "timestamp": "2026-10-03T00:19:28Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA01",
+    "user": "svc_ad",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0128",
+    "timestamp": "2026-10-08T15:51:26Z",
+    "source": "Microsoft Sentinel",
+    "category": "PowerShell suspect",
+    "host": "WKS-SUPPORT04",
+    "user": "l.diallo",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-SUPPORT04",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0129",
+    "timestamp": "2026-10-24T01:27:01Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Scan de port",
+    "host": "lin-grafana-01",
+    "event": "Scan de 451 ports détecté vers lin-grafana-01 en moins de 2 minutes",
+    "source_ip": "193.142.146.198",
+    "scanned_ports": 451
+  },
+  {
+    "id": "TKT-0130",
+    "timestamp": "2026-10-07T20:31:25Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "PowerShell suspect",
+    "host": "SRV-WEB01",
+    "user": "m.dupont",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-WEB01",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0131",
+    "timestamp": "2026-10-26T07:13:51Z",
+    "source": "Darktrace",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-DIR01",
+    "user": "l.diallo",
+    "event": "RMM TeamViewer utilisé par le support IT",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0132",
+    "timestamp": "2026-10-23T20:09:47Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WSUS01",
+    "user": "m.dupont",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0133",
+    "timestamp": "2026-10-08T14:07:17Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "SRV-WEB01",
+    "event": "KB manquante depuis 46 jours sur SRV-WEB01 (SQL Server 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0025",
+      "CVE-NOUVY-2024-0013"
+    ],
+    "product": "SQL Server 2019"
+  },
+  {
+    "id": "TKT-0134",
+    "timestamp": "2026-10-15T18:15:44Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-FILE01",
+    "user": "svc_ad",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0135",
+    "timestamp": "2026-10-02T20:34:53Z",
+    "source": "Splunk ES",
+    "category": "PowerShell suspect",
+    "host": "WKS-DIR01",
+    "user": "c.robert",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-DIR01",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0136",
+    "timestamp": "2026-10-12T21:40:41Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "svc_sql",
+    "event": "Modification sensible AD: AdminCount flag changé par svc_sql",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0137",
+    "timestamp": "2026-10-05T20:52:25Z",
+    "source": "Infoblox",
+    "category": "Exfiltration DNS",
+    "host": "SRV-WEB01",
+    "event": "Volume anormal de requêtes DNS TXT (263 Mo en 1h) depuis SRV-WEB01",
+    "domain_pattern": "*.beacon.darkweb.io",
+    "volume_mb": 263
+  },
+  {
+    "id": "TKT-0138",
+    "timestamp": "2026-10-26T01:46:29Z",
+    "source": "Trellix EDR",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMPTA02",
+    "user": "l.diallo",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMPTA02",
+    "process_tree": [
+      "svchost.exe",
+      "powershell.exe",
+      "wscript.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0139",
+    "timestamp": "2026-10-11T23:44:22Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "g.rousseau",
+    "event": "Modification sensible AD: AdminCount flag changé par g.rousseau",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0140",
+    "timestamp": "2026-10-15T21:46:34Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "SRV-DC02",
+    "event": "KB manquante depuis 83 jours sur SRV-DC02 (Microsoft Exchange 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0059",
+      "CVE-NOUVY-2024-0064",
+      "CVE-NOUVY-2025-0038",
+      "CVE-NOUVY-2025-0009"
+    ],
+    "product": "Microsoft Exchange 2019"
+  },
+  {
+    "id": "TKT-0141",
+    "timestamp": "2026-10-18T14:00:23Z",
+    "source": "BloxOne",
+    "category": "Exfiltration DNS",
+    "host": "lin-k8s-01",
+    "event": "Volume anormal de requêtes DNS TXT (49 Mo en 1h) depuis lin-k8s-01",
+    "domain_pattern": "*.c2.badcorp.net",
+    "volume_mb": 49
+  },
+  {
+    "id": "TKT-0142",
+    "timestamp": "2026-10-22T12:43:47Z",
+    "source": "Wazuh",
+    "category": "PowerShell suspect",
+    "host": "SRV-WEB01",
+    "user": "o.fontaine",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-WEB01",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0143",
+    "timestamp": "2026-10-06T19:03:43Z",
+    "source": "Elastic SIEM",
+    "category": "Scan de port",
+    "host": "SRV-FILE02",
+    "event": "Scan de 89 ports détecté vers SRV-FILE02 en moins de 2 minutes",
+    "source_ip": "92.63.197.8",
+    "scanned_ports": 89
+  },
+  {
+    "id": "TKT-0144",
+    "timestamp": "2026-10-24T20:52:09Z",
+    "source": "Microsoft Sentinel",
+    "category": "Scan de port",
+    "host": "lin-nginx-01",
+    "event": "Scan de 189 ports détecté vers lin-nginx-01 en moins de 2 minutes",
+    "source_ip": "45.137.21.9",
+    "scanned_ports": 189
+  },
+  {
+    "id": "TKT-0145",
+    "timestamp": "2026-10-31T07:13:37Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "lin-grafana-01",
+    "event": "KB manquante depuis 21 jours sur lin-grafana-01 (Cisco ASA)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0073"
+    ],
+    "product": "Cisco ASA"
+  },
+  {
+    "id": "TKT-0146",
+    "timestamp": "2026-10-28T20:21:17Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMPTA02",
+    "user": "e.petit",
+    "event": "Utilisateur e.petit a cliqué sur un lien malveillant depuis WKS-COMPTA02",
+    "url_clicked": "https://login-office365-security.com/login",
+    "sender": "no-reply@login-office365-security.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0147",
+    "timestamp": "2026-10-24T18:48:33Z",
+    "source": "Darktrace",
+    "category": "Brute force RDP",
+    "host": "lin-ci-01",
+    "user": "administrator",
+    "event": "616 tentatives RDP échouées en moins de 30 minutes sur lin-ci-01",
+    "source_ip": "91.189.189.42",
+    "port": 3389,
+    "failed_attempts": 616
+  },
+  {
+    "id": "TKT-0148",
+    "timestamp": "2026-10-20T15:32:09Z",
+    "source": "Splunk ES",
+    "category": "Scan de port",
+    "host": "WKS-RH01",
+    "event": "Scan de 174 ports détecté vers WKS-RH01 en moins de 2 minutes",
+    "source_ip": "162.158.78.5",
+    "scanned_ports": 174
+  },
+  {
+    "id": "TKT-0149",
+    "timestamp": "2026-10-02T20:24:23Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "WKS-RH01",
+    "user": "j.martin",
+    "event": "Utilisateur j.martin a cliqué sur un lien malveillant depuis WKS-RH01",
+    "url_clicked": "https://support-france-impots.net/login",
+    "sender": "no-reply@support-france-impots.net",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0150",
+    "timestamp": "2026-10-25T18:14:35Z",
+    "source": "Splunk ES",
+    "category": "Autre",
+    "host": "lin-elk-01",
+    "user": "k.simon",
+    "event": "GPO modifiée hors fenêtre de maintenance"
+  },
+  {
+    "id": "TKT-0151",
+    "timestamp": "2026-10-15T02:30:28Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Scan de port",
+    "host": "lin-k8s-01",
+    "event": "Scan de 87 ports détecté vers lin-k8s-01 en moins de 2 minutes",
+    "source_ip": "92.63.197.8",
+    "scanned_ports": 87
+  },
+  {
+    "id": "TKT-0152",
+    "timestamp": "2026-10-20T22:56:17Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "WKS-MKT02",
+    "user": "admin",
+    "event": "1852 tentatives RDP échouées en moins de 30 minutes sur WKS-MKT02",
+    "source_ip": "193.142.146.198",
+    "port": 3389,
+    "failed_attempts": 1852
+  },
+  {
+    "id": "TKT-0153",
+    "timestamp": "2026-10-10T10:47:26Z",
+    "source": "Wazuh",
+    "category": "Brute force RDP",
+    "host": "SRV-SQL01",
+    "user": "admin",
+    "event": "1912 tentatives RDP échouées en moins de 30 minutes sur SRV-SQL01",
+    "source_ip": "165.227.195.102",
+    "port": 3389,
+    "failed_attempts": 1912
+  },
+  {
+    "id": "TKT-0154",
+    "timestamp": "2026-10-30T15:02:18Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "SRV-FILE02",
+    "event": "KB manquante depuis 38 jours sur SRV-FILE02 (Windows 11 23H2)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0037",
+      "CVE-NOUVY-2026-0005"
+    ],
+    "product": "Windows 11 23H2"
+  },
+  {
+    "id": "TKT-0155",
+    "timestamp": "2026-10-29T12:28:55Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "lin-mail-01",
+    "event": "KB manquante depuis 63 jours sur lin-mail-01 (SQL Server 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0015"
+    ],
+    "product": "SQL Server 2019"
+  },
+  {
+    "id": "TKT-0156",
+    "timestamp": "2026-10-10T20:03:50Z",
+    "source": "Microsoft Sentinel",
+    "category": "C2 beaconing",
+    "host": "WKS-RH01",
+    "event": "Communications régulières (toutes les 431s) détectées depuis WKS-RH01 vers IP externe",
+    "destination_ip": "167.99.123.4",
+    "destination_port": 53,
+    "beacon_interval_s": 431
+  },
+  {
+    "id": "TKT-0157",
+    "timestamp": "2026-10-28T14:11:03Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Brute force RDP",
+    "host": "lin-dns-01",
+    "user": "user1",
+    "event": "327 tentatives RDP échouées en moins de 30 minutes sur lin-dns-01",
+    "source_ip": "91.189.189.42",
+    "port": 3389,
+    "failed_attempts": 327
+  },
+  {
+    "id": "TKT-0158",
+    "timestamp": "2026-10-26T17:25:13Z",
+    "source": "Microsoft Defender XDR",
+    "category": "C2 beaconing",
+    "host": "lin-nginx-01",
+    "event": "Communications régulières (toutes les 94s) détectées depuis lin-nginx-01 vers IP externe",
+    "destination_ip": "91.189.189.42",
+    "destination_port": 53,
+    "beacon_interval_s": 94
+  },
+  {
+    "id": "TKT-0159",
+    "timestamp": "2026-10-27T01:51:20Z",
+    "source": "Microsoft Defender XDR",
+    "category": "PowerShell suspect",
+    "host": "SRV-DC02",
+    "user": "p.henri",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-DC02",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0160",
+    "timestamp": "2026-10-07T14:07:16Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-SQL01",
+    "user": "svc_ad",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0161",
+    "timestamp": "2026-10-30T21:06:56Z",
+    "source": "Wazuh",
+    "category": "PowerShell suspect",
+    "host": "WKS-MKT02",
+    "user": "p.henri",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-MKT02",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0162",
+    "timestamp": "2026-10-23T08:49:23Z",
+    "source": "Wazuh",
+    "category": "Brute force RDP",
+    "host": "WKS-DEV03",
+    "user": "administrator",
+    "event": "1002 tentatives RDP échouées en moins de 30 minutes sur WKS-DEV03",
+    "source_ip": "45.148.10.33",
+    "port": 3389,
+    "failed_attempts": 1002
+  },
+  {
+    "id": "TKT-0163",
+    "timestamp": "2026-10-30T07:35:20Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Faux positif (fichier office)",
+    "host": "LAPTOP-SALES07",
+    "user": "n.bernard",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0164",
+    "timestamp": "2026-10-10T10:06:05Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "SRV-SQL01",
+    "user": "o.fontaine",
+    "event": "Utilisateur o.fontaine a cliqué sur un lien malveillant depuis SRV-SQL01",
+    "url_clicked": "https://sharefile-document-view.com/login",
+    "sender": "no-reply@sharefile-document-view.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0165",
+    "timestamp": "2026-10-23T17:44:56Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "a.chen",
+    "event": "Modification sensible AD: ServicePrincipalName changé par a.chen",
+    "attribute_changed": "ServicePrincipalName"
+  },
+  {
+    "id": "TKT-0166",
+    "timestamp": "2026-10-03T16:15:17Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "PowerShell suspect",
+    "host": "SRV-DC02",
+    "user": "n.bernard",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-DC02",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0167",
+    "timestamp": "2026-10-14T13:35:33Z",
+    "source": "Wazuh",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-DIR01",
+    "user": "s.lopez",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0168",
+    "timestamp": "2026-10-19T00:59:19Z",
+    "source": "Darktrace",
+    "category": "Brute force RDP",
+    "host": "LAPTOP-SALES07",
+    "user": "svc_sql",
+    "event": "271 tentatives RDP échouées en moins de 30 minutes sur LAPTOP-SALES07",
+    "source_ip": "91.189.189.42",
+    "port": 3389,
+    "failed_attempts": 271
+  },
+  {
+    "id": "TKT-0169",
+    "timestamp": "2026-10-28T20:48:02Z",
+    "source": "Elastic SIEM",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-PRINT01",
+    "user": "c.robert",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0170",
+    "timestamp": "2026-10-27T05:24:19Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "g.rousseau",
+    "event": "Modification sensible AD: AdminCount flag changé par g.rousseau",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0171",
+    "timestamp": "2026-10-01T03:16:14Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA01",
+    "user": "svc_ldap",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0172",
+    "timestamp": "2026-10-04T10:27:20Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Scan de port",
+    "host": "lin-mail-01",
+    "event": "Scan de 383 ports détecté vers lin-mail-01 en moins de 2 minutes",
+    "source_ip": "203.0.113.5",
+    "scanned_ports": 383
+  },
+  {
+    "id": "TKT-0173",
+    "timestamp": "2026-10-01T10:10:51Z",
+    "source": "Darktrace",
+    "category": "Scan de port",
+    "host": "SRV-EXCH01",
+    "event": "Scan de 217 ports détecté vers SRV-EXCH01 en moins de 2 minutes",
+    "source_ip": "162.158.78.5",
+    "scanned_ports": 217
+  },
+  {
+    "id": "TKT-0174",
+    "timestamp": "2026-10-09T11:17:50Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WEB01",
+    "user": "o.fontaine",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0175",
+    "timestamp": "2026-10-22T03:22:49Z",
+    "source": "Trellix EDR",
+    "category": "PowerShell suspect",
+    "host": "SRV-WEB01",
+    "user": "svc_ldap",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-WEB01",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0176",
+    "timestamp": "2026-10-11T19:39:57Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Autre",
+    "host": "SRV-DC02",
+    "user": "svc_ldap",
+    "event": "Clé USB inconnue connectée sur un poste de direction"
+  },
+  {
+    "id": "TKT-0177",
+    "timestamp": "2026-10-16T03:27:23Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "lin-mail-01",
+    "user": "m.dupont",
+    "event": "1734 tentatives RDP échouées en moins de 30 minutes sur lin-mail-01",
+    "source_ip": "45.148.10.33",
+    "port": 3389,
+    "failed_attempts": 1734
+  },
+  {
+    "id": "TKT-0178",
+    "timestamp": "2026-10-24T06:03:17Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA02",
+    "user": "c.robert",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0179",
+    "timestamp": "2026-10-21T09:15:16Z",
+    "source": "Wazuh",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-DEV03",
+    "user": "administrator",
+    "event": "Mise à jour légitime Adobe Reader bloquée",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0180",
+    "timestamp": "2026-10-15T02:07:53Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "WKS-DEV03",
+    "user": "f.laurent",
+    "event": "Utilisateur f.laurent a cliqué sur un lien malveillant depuis WKS-DEV03",
+    "url_clicked": "https://sharefile-document-view.com/login",
+    "sender": "no-reply@sharefile-document-view.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0181",
+    "timestamp": "2026-10-31T02:09:48Z",
+    "source": "Microsoft Sentinel",
+    "category": "Brute force RDP",
+    "host": "SRV-EXCH01",
+    "user": "user1",
+    "event": "1009 tentatives RDP échouées en moins de 30 minutes sur SRV-EXCH01",
+    "source_ip": "193.142.146.198",
+    "port": 3389,
+    "failed_attempts": 1009
+  },
+  {
+    "id": "TKT-0182",
+    "timestamp": "2026-10-23T21:41:04Z",
+    "source": "Darktrace",
+    "category": "PowerShell suspect",
+    "host": "SRV-WEB01",
+    "user": "y.perrin",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-WEB01",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0183",
+    "timestamp": "2026-10-31T20:49:36Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "SRV-SQL01",
+    "event": "KB manquante depuis 98 jours sur SRV-SQL01 (Windows Server 2022)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0037",
+      "CVE-NOUVY-2025-0067"
+    ],
+    "product": "Windows Server 2022"
+  },
+  {
+    "id": "TKT-0184",
+    "timestamp": "2026-10-03T03:08:48Z",
+    "source": "Elastic SIEM",
+    "category": "C2 beaconing",
+    "host": "lin-jump-01",
+    "event": "Communications régulières (toutes les 252s) détectées depuis lin-jump-01 vers IP externe",
+    "destination_ip": "80.82.77.33",
+    "destination_port": 4444,
+    "beacon_interval_s": 252
+  },
+  {
+    "id": "TKT-0185",
+    "timestamp": "2026-10-23T12:41:05Z",
+    "source": "SentinelOne",
+    "category": "Brute force RDP",
+    "host": "lin-k8s-02",
+    "user": "r.thomas",
+    "event": "1326 tentatives RDP échouées en moins de 30 minutes sur lin-k8s-02",
+    "source_ip": "198.51.100.42",
+    "port": 3389,
+    "failed_attempts": 1326
+  },
+  {
+    "id": "TKT-0186",
+    "timestamp": "2026-10-07T05:38:09Z",
+    "source": "Elastic SIEM",
+    "category": "Scan de port",
+    "host": "SRV-PRINT01",
+    "event": "Scan de 141 ports détecté vers SRV-PRINT01 en moins de 2 minutes",
+    "source_ip": "45.148.10.33",
+    "scanned_ports": 141
+  },
+  {
+    "id": "TKT-0187",
+    "timestamp": "2026-10-10T22:25:17Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "lin-ansible-01",
+    "user": "r.thomas",
+    "event": "1460 tentatives RDP échouées en moins de 30 minutes sur lin-ansible-01",
+    "source_ip": "162.158.78.5",
+    "port": 3389,
+    "failed_attempts": 1460
+  },
+  {
+    "id": "TKT-0188",
+    "timestamp": "2026-10-26T07:45:04Z",
+    "source": "Elastic SIEM",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-FILE01",
+    "user": "o.fontaine",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0189",
+    "timestamp": "2026-10-01T17:35:26Z",
+    "source": "Splunk ES",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM05",
+    "user": "administrator",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0190",
+    "timestamp": "2026-10-14T01:36:55Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WEB01",
+    "user": "svc_ad",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0191",
+    "timestamp": "2026-10-03T22:03:10Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "LAPTOP-SALES07",
+    "event": "KB manquante depuis 68 jours sur LAPTOP-SALES07 (Cisco ASA)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0039",
+      "CVE-NOUVY-2024-0053",
+      "CVE-NOUVY-2025-0008",
+      "CVE-NOUVY-2025-0076"
+    ],
+    "product": "Cisco ASA"
+  },
+  {
+    "id": "TKT-0192",
+    "timestamp": "2026-10-04T23:53:41Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "n.bernard",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0193",
+    "timestamp": "2026-10-31T17:10:16Z",
+    "source": "Trellix EDR",
+    "category": "PowerShell suspect",
+    "host": "SRV-APP01",
+    "user": "o.fontaine",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-APP01",
+    "process_tree": [
+      "svchost.exe",
+      "powershell.exe",
+      "wscript.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0194",
+    "timestamp": "2026-10-11T01:18:22Z",
+    "source": "SentinelOne",
+    "category": "Brute force RDP",
+    "host": "SRV-DC02",
+    "user": "admin",
+    "event": "144 tentatives RDP échouées en moins de 30 minutes sur SRV-DC02",
+    "source_ip": "91.223.82.5",
+    "port": 3389,
+    "failed_attempts": 144
+  },
+  {
+    "id": "TKT-0195",
+    "timestamp": "2026-10-17T08:08:59Z",
+    "source": "SentinelOne",
+    "category": "PowerShell suspect",
+    "host": "SRV-FILE01",
+    "user": "c.robert",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-FILE01",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0196",
+    "timestamp": "2026-10-19T06:04:53Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "SRV-WSUS01",
+    "event": "Scan de 412 ports détecté vers SRV-WSUS01 en moins de 2 minutes",
+    "source_ip": "91.189.189.42",
+    "scanned_ports": 412
+  },
+  {
+    "id": "TKT-0197",
+    "timestamp": "2026-10-09T09:38:13Z",
+    "source": "SentinelOne",
+    "category": "PowerShell suspect",
+    "host": "SRV-FILE02",
+    "user": "n.bernard",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-FILE02",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0198",
+    "timestamp": "2026-10-29T10:45:05Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "SRV-WEB01",
+    "event": "Scan de 425 ports détecté vers SRV-WEB01 en moins de 2 minutes",
+    "source_ip": "45.148.10.33",
+    "scanned_ports": 425
+  },
+  {
+    "id": "TKT-0199",
+    "timestamp": "2026-10-31T00:07:56Z",
+    "source": "CrowdStrike Falcon",
+    "category": "PowerShell suspect",
+    "host": "WKS-MKT02",
+    "user": "a.chen",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-MKT02",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0200",
+    "timestamp": "2026-10-15T13:03:13Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Brute force RDP",
+    "host": "lin-k8s-02",
+    "user": "administrator",
+    "event": "1161 tentatives RDP échouées en moins de 30 minutes sur lin-k8s-02",
+    "source_ip": "80.82.77.33",
+    "port": 3389,
+    "failed_attempts": 1161
+  },
+  {
+    "id": "TKT-0201",
+    "timestamp": "2026-10-20T19:25:49Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA01",
+    "user": "o.fontaine",
+    "event": "RMM TeamViewer utilisé par le support IT",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0202",
+    "timestamp": "2026-10-02T00:05:13Z",
+    "source": "Microsoft Sentinel",
+    "category": "PowerShell suspect",
+    "host": "WKS-SUPPORT04",
+    "user": "k.simon",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-SUPPORT04",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0203",
+    "timestamp": "2026-10-26T10:55:24Z",
+    "source": "Splunk ES",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-FILE01",
+    "user": "o.fontaine",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0204",
+    "timestamp": "2026-10-04T08:49:16Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "WKS-RH01",
+    "user": "k.simon",
+    "event": "Utilisateur k.simon a cliqué sur un lien malveillant depuis WKS-RH01",
+    "url_clicked": "https://sharefile-document-view.com/login",
+    "sender": "no-reply@sharefile-document-view.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0205",
+    "timestamp": "2026-10-22T23:42:47Z",
+    "source": "Wazuh",
+    "category": "C2 beaconing",
+    "host": "SRV-FILE02",
+    "event": "Communications régulières (toutes les 346s) détectées depuis SRV-FILE02 vers IP externe",
+    "destination_ip": "45.137.21.9",
+    "destination_port": 443,
+    "beacon_interval_s": 346
+  },
+  {
+    "id": "TKT-0206",
+    "timestamp": "2026-10-01T14:20:26Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "SRV-EXCH01",
+    "event": "KB manquante depuis 67 jours sur SRV-EXCH01 (Ubuntu 22.04)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0026",
+      "CVE-NOUVY-2025-0049"
+    ],
+    "product": "Ubuntu 22.04"
+  },
+  {
+    "id": "TKT-0207",
+    "timestamp": "2026-10-30T15:04:05Z",
+    "source": "Elastic SIEM",
+    "category": "Scan de port",
+    "host": "SRV-PRINT01",
+    "event": "Scan de 361 ports détecté vers SRV-PRINT01 en moins de 2 minutes",
+    "source_ip": "193.142.146.198",
+    "scanned_ports": 361
+  },
+  {
+    "id": "TKT-0208",
+    "timestamp": "2026-10-16T10:11:31Z",
+    "source": "Microsoft Sentinel",
+    "category": "Brute force RDP",
+    "host": "lin-k8s-02",
+    "user": "user1",
+    "event": "108 tentatives RDP échouées en moins de 30 minutes sur lin-k8s-02",
+    "source_ip": "198.51.100.42",
+    "port": 3389,
+    "failed_attempts": 108
+  },
+  {
+    "id": "TKT-0209",
+    "timestamp": "2026-10-04T20:45:55Z",
+    "source": "Elastic SIEM",
+    "category": "Brute force RDP",
+    "host": "SRV-SQL01",
+    "user": "admin",
+    "event": "938 tentatives RDP échouées en moins de 30 minutes sur SRV-SQL01",
+    "source_ip": "198.51.100.17",
+    "port": 3389,
+    "failed_attempts": 938
+  },
+  {
+    "id": "TKT-0210",
+    "timestamp": "2026-10-04T11:56:53Z",
+    "source": "CrowdStrike Falcon",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMM05",
+    "user": "f.laurent",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMM05",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0211",
+    "timestamp": "2026-10-22T04:58:22Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Scan de port",
+    "host": "SRV-SQL01",
+    "event": "Scan de 308 ports détecté vers SRV-SQL01 en moins de 2 minutes",
+    "source_ip": "80.82.77.33",
+    "scanned_ports": 308
+  },
+  {
+    "id": "TKT-0212",
+    "timestamp": "2026-10-05T12:49:52Z",
+    "source": "Wazuh",
+    "category": "C2 beaconing",
+    "host": "lin-postgres-01",
+    "event": "Communications régulières (toutes les 336s) détectées depuis lin-postgres-01 vers IP externe",
+    "destination_ip": "45.142.212.17",
+    "destination_port": 443,
+    "beacon_interval_s": 336
+  },
+  {
+    "id": "TKT-0213",
+    "timestamp": "2026-10-23T04:33:13Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "lin-ci-01",
+    "event": "KB manquante depuis 99 jours sur lin-ci-01 (Windows Server 2022)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0055",
+      "CVE-NOUVY-2025-0017",
+      "CVE-NOUVY-2025-0001",
+      "CVE-NOUVY-2024-0045"
+    ],
+    "product": "Windows Server 2022"
+  },
+  {
+    "id": "TKT-0214",
+    "timestamp": "2026-10-23T20:15:06Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Brute force RDP",
+    "host": "SRV-APP01",
+    "user": "administrator",
+    "event": "1262 tentatives RDP échouées en moins de 30 minutes sur SRV-APP01",
+    "source_ip": "185.220.101.33",
+    "port": 3389,
+    "failed_attempts": 1262
+  },
+  {
+    "id": "TKT-0215",
+    "timestamp": "2026-10-28T05:04:38Z",
+    "source": "Elastic SIEM",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMM12",
+    "user": "f.laurent",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMM12",
+    "process_tree": [
+      "svchost.exe",
+      "powershell.exe",
+      "wscript.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0216",
+    "timestamp": "2026-10-18T15:22:21Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "SRV-PRINT01",
+    "user": "r.thomas",
+    "event": "964 tentatives RDP échouées en moins de 30 minutes sur SRV-PRINT01",
+    "source_ip": "162.158.78.5",
+    "port": 3389,
+    "failed_attempts": 964
+  },
+  {
+    "id": "TKT-0217",
+    "timestamp": "2026-10-25T02:46:57Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-PRINT01",
+    "user": "svc_ldap",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0218",
+    "timestamp": "2026-10-02T13:47:20Z",
+    "source": "Darktrace",
+    "category": "Brute force RDP",
+    "host": "SRV-SQL01",
+    "user": "administrator",
+    "event": "1274 tentatives RDP échouées en moins de 30 minutes sur SRV-SQL01",
+    "source_ip": "193.142.146.198",
+    "port": 3389,
+    "failed_attempts": 1274
+  },
+  {
+    "id": "TKT-0219",
+    "timestamp": "2026-10-07T12:35:32Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-DC01",
+    "user": "administrator",
+    "event": "Mise à jour légitime Adobe Reader bloquée",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0220",
+    "timestamp": "2026-10-26T15:33:22Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "s.lopez",
+    "event": "Modification sensible AD: ServicePrincipalName changé par s.lopez",
+    "attribute_changed": "ServicePrincipalName"
+  },
+  {
+    "id": "TKT-0221",
+    "timestamp": "2026-10-02T18:30:32Z",
+    "source": "Trellix EDR",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMPTA01",
+    "user": "a.chen",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMPTA01",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0222",
+    "timestamp": "2026-10-22T22:20:15Z",
+    "source": "CrowdStrike Falcon",
+    "category": "PowerShell suspect",
+    "host": "SRV-WSUS01",
+    "user": "svc_sql",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-WSUS01",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0223",
+    "timestamp": "2026-10-04T09:15:19Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMM12",
+    "user": "o.fontaine",
+    "event": "Utilisateur o.fontaine a cliqué sur un lien malveillant depuis WKS-COMM12",
+    "url_clicked": "https://support-france-impots.net/login",
+    "sender": "no-reply@support-france-impots.net",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0224",
+    "timestamp": "2026-10-29T12:21:11Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "WKS-RH01",
+    "user": "svc_ldap",
+    "event": "Utilisateur svc_ldap a cliqué sur un lien malveillant depuis WKS-RH01",
+    "url_clicked": "https://support-france-impots.net/login",
+    "sender": "no-reply@support-france-impots.net",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0225",
+    "timestamp": "2026-10-30T05:28:29Z",
+    "source": "Splunk ES",
+    "category": "C2 beaconing",
+    "host": "SRV-DC02",
+    "event": "Communications régulières (toutes les 157s) détectées depuis SRV-DC02 vers IP externe",
+    "destination_ip": "80.82.78.202",
+    "destination_port": 8080,
+    "beacon_interval_s": 157
+  },
+  {
+    "id": "TKT-0226",
+    "timestamp": "2026-10-04T13:14:53Z",
+    "source": "Elastic SIEM",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM12",
+    "user": "svc_ad",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0227",
+    "timestamp": "2026-10-15T19:03:55Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-SQL01",
+    "user": "svc_backup",
+    "event": "RMM TeamViewer utilisé par le support IT",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0228",
+    "timestamp": "2026-10-03T06:57:41Z",
+    "source": "Splunk ES",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "j.martin",
+    "event": "Modification sensible AD: membership of Domain Admins changé par j.martin",
+    "attribute_changed": "membership of Domain Admins"
+  },
+  {
+    "id": "TKT-0229",
+    "timestamp": "2026-10-30T17:44:17Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "WKS-RH01",
+    "event": "KB manquante depuis 28 jours sur WKS-RH01 (Microsoft Exchange 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0063",
+      "CVE-NOUVY-2024-0013"
+    ],
+    "product": "Microsoft Exchange 2019"
+  },
+  {
+    "id": "TKT-0230",
+    "timestamp": "2026-10-14T15:38:28Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Scan de port",
+    "host": "lin-jump-01",
+    "event": "Scan de 348 ports détecté vers lin-jump-01 en moins de 2 minutes",
+    "source_ip": "92.63.197.8",
+    "scanned_ports": 348
+  },
+  {
+    "id": "TKT-0231",
+    "timestamp": "2026-10-03T16:34:32Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMM12",
+    "user": "c.robert",
+    "event": "Utilisateur c.robert a cliqué sur un lien malveillant depuis WKS-COMM12",
+    "url_clicked": "https://docusign-reader-pdf.com/login",
+    "sender": "no-reply@docusign-reader-pdf.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0232",
+    "timestamp": "2026-10-17T07:07:12Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "SRV-SQL01",
+    "user": "y.perrin",
+    "event": "Utilisateur y.perrin a cliqué sur un lien malveillant depuis SRV-SQL01",
+    "url_clicked": "https://docusign-reader-pdf.com/login",
+    "sender": "no-reply@docusign-reader-pdf.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0233",
+    "timestamp": "2026-10-10T21:34:10Z",
+    "source": "Elastic SIEM",
+    "category": "Brute force RDP",
+    "host": "lin-ansible-01",
+    "user": "user1",
+    "event": "1895 tentatives RDP échouées en moins de 30 minutes sur lin-ansible-01",
+    "source_ip": "198.51.100.17",
+    "port": 3389,
+    "failed_attempts": 1895
+  },
+  {
+    "id": "TKT-0234",
+    "timestamp": "2026-10-26T15:33:29Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "SRV-WSUS01",
+    "event": "KB manquante depuis 92 jours sur SRV-WSUS01 (SQL Server 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0004",
+      "CVE-NOUVY-2025-0077"
+    ],
+    "product": "SQL Server 2019"
+  },
+  {
+    "id": "TKT-0235",
+    "timestamp": "2026-10-22T19:46:57Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "SRV-PRINT01",
+    "event": "KB manquante depuis 87 jours sur SRV-PRINT01 (Debian 12)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0008"
+    ],
+    "product": "Debian 12"
+  },
+  {
+    "id": "TKT-0236",
+    "timestamp": "2026-10-18T11:43:49Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "lin-ansible-01",
+    "event": "KB manquante depuis 93 jours sur lin-ansible-01 (SQL Server 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0050",
+      "CVE-NOUVY-2024-0064",
+      "CVE-NOUVY-2024-0072",
+      "CVE-NOUVY-2025-0063"
+    ],
+    "product": "SQL Server 2019"
+  },
+  {
+    "id": "TKT-0237",
+    "timestamp": "2026-10-02T03:26:21Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "WKS-DIR01",
+    "event": "KB manquante depuis 27 jours sur WKS-DIR01 (Ubuntu 22.04)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0002",
+      "CVE-NOUVY-2025-0061"
+    ],
+    "product": "Ubuntu 22.04"
+  },
+  {
+    "id": "TKT-0238",
+    "timestamp": "2026-10-23T03:54:41Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "SRV-WEB01",
+    "event": "Scan de 416 ports détecté vers SRV-WEB01 en moins de 2 minutes",
+    "source_ip": "91.189.189.42",
+    "scanned_ports": 416
+  },
+  {
+    "id": "TKT-0239",
+    "timestamp": "2026-10-28T07:21:49Z",
+    "source": "Wazuh",
+    "category": "Scan de port",
+    "host": "WKS-DEV03",
+    "event": "Scan de 426 ports détecté vers WKS-DEV03 en moins de 2 minutes",
+    "source_ip": "185.220.101.5",
+    "scanned_ports": 426
+  },
+  {
+    "id": "TKT-0240",
+    "timestamp": "2026-10-05T22:20:53Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-APP01",
+    "user": "m.dupont",
+    "event": "Mise à jour légitime Adobe Reader bloquée",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0241",
+    "timestamp": "2026-10-24T23:23:51Z",
+    "source": "Wazuh",
+    "category": "Scan de port",
+    "host": "lin-dns-01",
+    "event": "Scan de 59 ports détecté vers lin-dns-01 en moins de 2 minutes",
+    "source_ip": "165.227.195.102",
+    "scanned_ports": 59
+  },
+  {
+    "id": "TKT-0242",
+    "timestamp": "2026-10-08T18:26:11Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "LAPTOP-SALES07",
+    "user": "j.martin",
+    "event": "Utilisateur j.martin a cliqué sur un lien malveillant depuis LAPTOP-SALES07",
+    "url_clicked": "https://docusign-reader-pdf.com/login",
+    "sender": "no-reply@docusign-reader-pdf.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0243",
+    "timestamp": "2026-10-06T11:56:24Z",
+    "source": "SentinelOne",
+    "category": "Autre",
+    "host": "WKS-COMPTA02",
+    "user": "admin",
+    "event": "GPO modifiée hors fenêtre de maintenance"
+  },
+  {
+    "id": "TKT-0244",
+    "timestamp": "2026-10-17T18:21:55Z",
+    "source": "Elastic SIEM",
+    "category": "Brute force RDP",
+    "host": "SRV-FILE01",
+    "user": "administrator",
+    "event": "308 tentatives RDP échouées en moins de 30 minutes sur SRV-FILE01",
+    "source_ip": "167.99.233.17",
+    "port": 3389,
+    "failed_attempts": 308
+  },
+  {
+    "id": "TKT-0245",
+    "timestamp": "2026-10-05T13:11:17Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "PowerShell suspect",
+    "host": "SRV-WEB01",
+    "user": "f.laurent",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-WEB01",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0246",
+    "timestamp": "2026-10-01T08:13:53Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "SRV-DC01",
+    "user": "o.fontaine",
+    "event": "Utilisateur o.fontaine a cliqué sur un lien malveillant depuis SRV-DC01",
+    "url_clicked": "https://login-office365-security.com/login",
+    "sender": "no-reply@login-office365-security.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0247",
+    "timestamp": "2026-10-07T22:15:36Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Brute force RDP",
+    "host": "lin-k8s-01",
+    "user": "f.laurent",
+    "event": "1830 tentatives RDP échouées en moins de 30 minutes sur lin-k8s-01",
+    "source_ip": "185.220.101.33",
+    "port": 3389,
+    "failed_attempts": 1830
+  },
+  {
+    "id": "TKT-0248",
+    "timestamp": "2026-10-23T21:25:37Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "svc_ad",
+    "event": "Modification sensible AD: membership of Domain Admins changé par svc_ad",
+    "attribute_changed": "membership of Domain Admins"
+  },
+  {
+    "id": "TKT-0249",
+    "timestamp": "2026-10-05T04:34:16Z",
+    "source": "Wazuh",
+    "category": "Scan de port",
+    "host": "WKS-MKT02",
+    "event": "Scan de 449 ports détecté vers WKS-MKT02 en moins de 2 minutes",
+    "source_ip": "45.137.21.9",
+    "scanned_ports": 449
+  },
+  {
+    "id": "TKT-0250",
+    "timestamp": "2026-10-30T17:28:57Z",
+    "source": "Wazuh",
+    "category": "Brute force RDP",
+    "host": "lin-dns-01",
+    "user": "administrator",
+    "event": "1751 tentatives RDP échouées en moins de 30 minutes sur lin-dns-01",
+    "source_ip": "92.63.197.8",
+    "port": 3389,
+    "failed_attempts": 1751
+  },
+  {
+    "id": "TKT-0251",
+    "timestamp": "2026-10-03T18:40:43Z",
+    "source": "Splunk ES",
+    "category": "Brute force RDP",
+    "host": "lin-grafana-01",
+    "user": "admin",
+    "event": "1057 tentatives RDP échouées en moins de 30 minutes sur lin-grafana-01",
+    "source_ip": "198.51.100.17",
+    "port": 3389,
+    "failed_attempts": 1057
+  },
+  {
+    "id": "TKT-0252",
+    "timestamp": "2026-10-30T02:17:56Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "WKS-COMM05",
+    "user": "f.laurent",
+    "event": "1751 tentatives RDP échouées en moins de 30 minutes sur WKS-COMM05",
+    "source_ip": "80.82.77.33",
+    "port": 3389,
+    "failed_attempts": 1751
+  },
+  {
+    "id": "TKT-0253",
+    "timestamp": "2026-10-26T06:56:02Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "SRV-WEB01",
+    "user": "e.petit",
+    "event": "Utilisateur e.petit a cliqué sur un lien malveillant depuis SRV-WEB01",
+    "url_clicked": "https://login-office365-security.com/login",
+    "sender": "no-reply@login-office365-security.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0254",
+    "timestamp": "2026-10-23T23:43:58Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "SRV-WSUS01",
+    "event": "Scan de 353 ports détecté vers SRV-WSUS01 en moins de 2 minutes",
+    "source_ip": "193.142.146.198",
+    "scanned_ports": 353
+  },
+  {
+    "id": "TKT-0255",
+    "timestamp": "2026-10-12T13:21:20Z",
+    "source": "Elastic SIEM",
+    "category": "Brute force RDP",
+    "host": "SRV-SQL01",
+    "user": "user1",
+    "event": "1012 tentatives RDP échouées en moins de 30 minutes sur SRV-SQL01",
+    "source_ip": "80.82.78.202",
+    "port": 3389,
+    "failed_attempts": 1012
+  },
+  {
+    "id": "TKT-0256",
+    "timestamp": "2026-10-20T16:18:29Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "lin-k8s-01",
+    "event": "Scan de 205 ports détecté vers lin-k8s-01 en moins de 2 minutes",
+    "source_ip": "80.82.78.202",
+    "scanned_ports": 205
+  },
+  {
+    "id": "TKT-0257",
+    "timestamp": "2026-10-23T18:14:28Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM12",
+    "user": "r.thomas",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0258",
+    "timestamp": "2026-10-14T18:25:45Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Scan de port",
+    "host": "lin-k8s-01",
+    "event": "Scan de 304 ports détecté vers lin-k8s-01 en moins de 2 minutes",
+    "source_ip": "198.51.100.17",
+    "scanned_ports": 304
+  },
+  {
+    "id": "TKT-0259",
+    "timestamp": "2026-10-02T02:17:24Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "administrator",
+    "event": "Modification sensible AD: userAccountControl (password-never-expires) changé par administrator",
+    "attribute_changed": "userAccountControl (password-never-expires)"
+  },
+  {
+    "id": "TKT-0260",
+    "timestamp": "2026-10-29T21:48:03Z",
+    "source": "Splunk ES",
+    "category": "C2 beaconing",
+    "host": "lin-backup-01",
+    "event": "Communications régulières (toutes les 381s) détectées depuis lin-backup-01 vers IP externe",
+    "destination_ip": "45.137.21.9",
+    "destination_port": 53,
+    "beacon_interval_s": 381
+  },
+  {
+    "id": "TKT-0261",
+    "timestamp": "2026-10-24T16:13:24Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Scan de port",
+    "host": "SRV-DC02",
+    "event": "Scan de 56 ports détecté vers SRV-DC02 en moins de 2 minutes",
+    "source_ip": "162.158.78.5",
+    "scanned_ports": 56
+  },
+  {
+    "id": "TKT-0262",
+    "timestamp": "2026-10-10T22:08:40Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "SRV-FILE02",
+    "user": "administrator",
+    "event": "1183 tentatives RDP échouées en moins de 30 minutes sur SRV-FILE02",
+    "source_ip": "198.51.100.17",
+    "port": 3389,
+    "failed_attempts": 1183
+  },
+  {
+    "id": "TKT-0263",
+    "timestamp": "2026-10-28T16:29:17Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "lin-backup-01",
+    "event": "KB manquante depuis 118 jours sur lin-backup-01 (Debian 12)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0005"
+    ],
+    "product": "Debian 12"
+  },
+  {
+    "id": "TKT-0264",
+    "timestamp": "2026-10-26T14:42:33Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "lin-ansible-01",
+    "user": "user1",
+    "event": "323 tentatives RDP échouées en moins de 30 minutes sur lin-ansible-01",
+    "source_ip": "162.158.78.5",
+    "port": 3389,
+    "failed_attempts": 323
+  },
+  {
+    "id": "TKT-0265",
+    "timestamp": "2026-10-23T15:12:07Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "LAPTOP-SALES07",
+    "user": "n.bernard",
+    "event": "Utilisateur n.bernard a cliqué sur un lien malveillant depuis LAPTOP-SALES07",
+    "url_clicked": "https://docusign-reader-pdf.com/login",
+    "sender": "no-reply@docusign-reader-pdf.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0266",
+    "timestamp": "2026-10-26T05:56:26Z",
+    "source": "Splunk ES",
+    "category": "PowerShell suspect",
+    "host": "SRV-EXCH01",
+    "user": "a.chen",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-EXCH01",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0267",
+    "timestamp": "2026-10-01T11:50:50Z",
+    "source": "Microsoft Sentinel",
+    "category": "Scan de port",
+    "host": "SRV-DC02",
+    "event": "Scan de 77 ports détecté vers SRV-DC02 en moins de 2 minutes",
+    "source_ip": "198.51.100.42",
+    "scanned_ports": 77
+  },
+  {
+    "id": "TKT-0268",
+    "timestamp": "2026-10-12T05:19:00Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "WKS-SUPPORT04",
+    "user": "user1",
+    "event": "515 tentatives RDP échouées en moins de 30 minutes sur WKS-SUPPORT04",
+    "source_ip": "185.220.101.33",
+    "port": 3389,
+    "failed_attempts": 515
+  },
+  {
+    "id": "TKT-0269",
+    "timestamp": "2026-10-14T15:35:48Z",
+    "source": "Microsoft Sentinel",
+    "category": "Brute force RDP",
+    "host": "WKS-COMM05",
+    "user": "administrator",
+    "event": "1524 tentatives RDP échouées en moins de 30 minutes sur WKS-COMM05",
+    "source_ip": "162.158.78.5",
+    "port": 3389,
+    "failed_attempts": 1524
+  },
+  {
+    "id": "TKT-0270",
+    "timestamp": "2026-10-31T17:43:55Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Autre",
+    "host": "WKS-COMM05",
+    "user": "administrator",
+    "event": "GPO modifiée hors fenêtre de maintenance"
+  },
+  {
+    "id": "TKT-0271",
+    "timestamp": "2026-10-06T14:36:47Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-EXCH01",
+    "user": "r.thomas",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0272",
+    "timestamp": "2026-10-14T03:15:27Z",
+    "source": "Darktrace",
+    "category": "Scan de port",
+    "host": "lin-postgres-01",
+    "event": "Scan de 55 ports détecté vers lin-postgres-01 en moins de 2 minutes",
+    "source_ip": "80.82.77.33",
+    "scanned_ports": 55
+  },
+  {
+    "id": "TKT-0273",
+    "timestamp": "2026-10-28T00:15:02Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "C2 beaconing",
+    "host": "SRV-DC01",
+    "event": "Communications régulières (toutes les 75s) détectées depuis SRV-DC01 vers IP externe",
+    "destination_ip": "203.0.113.5",
+    "destination_port": 53,
+    "beacon_interval_s": 75
+  },
+  {
+    "id": "TKT-0274",
+    "timestamp": "2026-10-31T09:49:18Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "LAPTOP-SALES07",
+    "event": "KB manquante depuis 103 jours sur LAPTOP-SALES07 (Ubuntu 22.04)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0002",
+      "CVE-NOUVY-2025-0043",
+      "CVE-NOUVY-2025-0010",
+      "CVE-NOUVY-2025-0064"
+    ],
+    "product": "Ubuntu 22.04"
+  },
+  {
+    "id": "TKT-0275",
+    "timestamp": "2026-10-06T21:37:42Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "svc_sql",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0276",
+    "timestamp": "2026-10-17T03:22:27Z",
+    "source": "Elastic SIEM",
+    "category": "Scan de port",
+    "host": "WKS-DEV03",
+    "event": "Scan de 396 ports détecté vers WKS-DEV03 en moins de 2 minutes",
+    "source_ip": "198.51.100.17",
+    "scanned_ports": 396
+  },
+  {
+    "id": "TKT-0277",
+    "timestamp": "2026-10-30T14:19:55Z",
+    "source": "Darktrace",
+    "category": "Brute force RDP",
+    "host": "lin-elk-01",
+    "user": "user1",
+    "event": "972 tentatives RDP échouées en moins de 30 minutes sur lin-elk-01",
+    "source_ip": "185.220.101.33",
+    "port": 3389,
+    "failed_attempts": 972
+  },
+  {
+    "id": "TKT-0278",
+    "timestamp": "2026-10-28T20:19:53Z",
+    "source": "Trellix EDR",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMM12",
+    "user": "o.fontaine",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMM12",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0279",
+    "timestamp": "2026-10-09T14:29:16Z",
+    "source": "Microsoft Sentinel",
+    "category": "Autre",
+    "host": "WKS-MKT02",
+    "user": "g.rousseau",
+    "event": "Pic de connexions VPN depuis l'étranger (3 pays simultanés)"
+  },
+  {
+    "id": "TKT-0280",
+    "timestamp": "2026-10-12T21:46:15Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Scan de port",
+    "host": "SRV-FILE01",
+    "event": "Scan de 220 ports détecté vers SRV-FILE01 en moins de 2 minutes",
+    "source_ip": "198.51.100.17",
+    "scanned_ports": 220
+  },
+  {
+    "id": "TKT-0281",
+    "timestamp": "2026-10-24T00:44:36Z",
+    "source": "Splunk ES",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "a.chen",
+    "event": "Modification sensible AD: AdminCount flag changé par a.chen",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0282",
+    "timestamp": "2026-10-16T04:04:10Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WSUS01",
+    "user": "e.petit",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0283",
+    "timestamp": "2026-10-09T01:08:47Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Scan de port",
+    "host": "SRV-DC02",
+    "event": "Scan de 99 ports détecté vers SRV-DC02 en moins de 2 minutes",
+    "source_ip": "167.99.233.17",
+    "scanned_ports": 99
+  },
+  {
+    "id": "TKT-0284",
+    "timestamp": "2026-10-16T20:34:18Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "lin-mail-01",
+    "event": "KB manquante depuis 76 jours sur lin-mail-01 (Windows Server 2022)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0016",
+      "CVE-NOUVY-2025-0024"
+    ],
+    "product": "Windows Server 2022"
+  },
+  {
+    "id": "TKT-0285",
+    "timestamp": "2026-10-24T17:34:16Z",
+    "source": "Darktrace",
+    "category": "PowerShell suspect",
+    "host": "SRV-APP01",
+    "user": "svc_ldap",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-APP01",
+    "process_tree": [
+      "svchost.exe",
+      "powershell.exe",
+      "wscript.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0286",
+    "timestamp": "2026-10-31T11:19:48Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Brute force RDP",
+    "host": "lin-ci-01",
+    "user": "admin",
+    "event": "62 tentatives RDP échouées en moins de 30 minutes sur lin-ci-01",
+    "source_ip": "167.99.123.4",
+    "port": 3389,
+    "failed_attempts": 62
+  },
+  {
+    "id": "TKT-0287",
+    "timestamp": "2026-10-31T17:35:21Z",
+    "source": "Elastic SIEM",
+    "category": "Scan de port",
+    "host": "SRV-FILE02",
+    "event": "Scan de 310 ports détecté vers SRV-FILE02 en moins de 2 minutes",
+    "source_ip": "80.82.78.202",
+    "scanned_ports": 310
+  },
+  {
+    "id": "TKT-0288",
+    "timestamp": "2026-10-25T07:18:02Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-SUPPORT04",
+    "user": "j.martin",
+    "event": "RMM TeamViewer utilisé par le support IT",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0289",
+    "timestamp": "2026-10-28T14:39:11Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-FILE02",
+    "user": "svc_ad",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0290",
+    "timestamp": "2026-10-23T13:34:02Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "k.simon",
+    "event": "RMM TeamViewer utilisé par le support IT",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0291",
+    "timestamp": "2026-10-10T09:36:17Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-SQL01",
+    "user": "svc_backup",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0292",
+    "timestamp": "2026-10-05T05:46:27Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "svc_backup",
+    "event": "Modification sensible AD: ServicePrincipalName changé par svc_backup",
+    "attribute_changed": "ServicePrincipalName"
+  },
+  {
+    "id": "TKT-0293",
+    "timestamp": "2026-10-06T00:20:38Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "p.henri",
+    "event": "Modification sensible AD: msDS-AllowedToDelegateTo changé par p.henri",
+    "attribute_changed": "msDS-AllowedToDelegateTo"
+  },
+  {
+    "id": "TKT-0294",
+    "timestamp": "2026-10-29T23:58:11Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-DC02",
+    "user": "r.thomas",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0295",
+    "timestamp": "2026-10-21T20:02:19Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "SRV-WEB01",
+    "user": "user1",
+    "event": "1900 tentatives RDP échouées en moins de 30 minutes sur SRV-WEB01",
+    "source_ip": "45.142.212.17",
+    "port": 3389,
+    "failed_attempts": 1900
+  },
+  {
+    "id": "TKT-0296",
+    "timestamp": "2026-10-07T23:48:07Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "SRV-PRINT01",
+    "event": "KB manquante depuis 118 jours sur SRV-PRINT01 (Microsoft Exchange 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0078",
+      "CVE-NOUVY-2026-0037",
+      "CVE-NOUVY-2024-0005",
+      "CVE-NOUVY-2024-0062"
+    ],
+    "product": "Microsoft Exchange 2019"
+  },
+  {
+    "id": "TKT-0297",
+    "timestamp": "2026-10-12T00:27:05Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Autre",
+    "host": "lin-ci-01",
+    "user": "n.bernard",
+    "event": "Pic de connexions VPN depuis l'étranger (3 pays simultanés)"
+  },
+  {
+    "id": "TKT-0298",
+    "timestamp": "2026-10-29T16:15:40Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "y.perrin",
+    "event": "Modification sensible AD: AdminCount flag changé par y.perrin",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0299",
+    "timestamp": "2026-10-24T08:46:56Z",
+    "source": "Elastic SIEM",
+    "category": "C2 beaconing",
+    "host": "lin-postgres-01",
+    "event": "Communications régulières (toutes les 159s) détectées depuis lin-postgres-01 vers IP externe",
+    "destination_ip": "185.220.101.5",
+    "destination_port": 4444,
+    "beacon_interval_s": 159
+  },
+  {
+    "id": "TKT-0300",
+    "timestamp": "2026-10-16T15:13:55Z",
+    "source": "Microsoft Defender XDR",
+    "category": "PowerShell suspect",
+    "host": "SRV-SQL01",
+    "user": "s.lopez",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-SQL01",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0301",
+    "timestamp": "2026-10-10T12:45:46Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "SRV-FILE01",
+    "user": "o.fontaine",
+    "event": "Utilisateur o.fontaine a cliqué sur un lien malveillant depuis SRV-FILE01",
+    "url_clicked": "https://login-office365-security.com/login",
+    "sender": "no-reply@login-office365-security.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0302",
+    "timestamp": "2026-10-09T01:45:27Z",
+    "source": "Splunk ES",
+    "category": "PowerShell suspect",
+    "host": "WKS-RH01",
+    "user": "k.simon",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-RH01",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0303",
+    "timestamp": "2026-10-03T15:28:49Z",
+    "source": "SentinelOne",
+    "category": "Scan de port",
+    "host": "SRV-EXCH01",
+    "event": "Scan de 391 ports détecté vers SRV-EXCH01 en moins de 2 minutes",
+    "source_ip": "167.99.233.17",
+    "scanned_ports": 391
+  },
+  {
+    "id": "TKT-0304",
+    "timestamp": "2026-10-22T11:34:57Z",
+    "source": "SentinelOne",
+    "category": "Scan de port",
+    "host": "lin-postgres-01",
+    "event": "Scan de 60 ports détecté vers lin-postgres-01 en moins de 2 minutes",
+    "source_ip": "185.220.101.33",
+    "scanned_ports": 60
+  },
+  {
+    "id": "TKT-0305",
+    "timestamp": "2026-10-26T03:46:00Z",
+    "source": "Splunk ES",
+    "category": "Autre",
+    "host": "lin-elk-01",
+    "user": "admin",
+    "event": "Baseline de performance CPU dépassée de 400%"
+  },
+  {
+    "id": "TKT-0306",
+    "timestamp": "2026-10-20T07:14:08Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "WKS-SUPPORT04",
+    "event": "KB manquante depuis 34 jours sur WKS-SUPPORT04 (SQL Server 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0032",
+      "CVE-NOUVY-2025-0076",
+      "CVE-NOUVY-2025-0016",
+      "CVE-NOUVY-2025-0027"
+    ],
+    "product": "SQL Server 2019"
+  },
+  {
+    "id": "TKT-0307",
+    "timestamp": "2026-10-12T17:17:38Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WEB01",
+    "user": "s.lopez",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0308",
+    "timestamp": "2026-10-10T17:00:54Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "lin-backup-01",
+    "event": "KB manquante depuis 70 jours sur lin-backup-01 (Cisco ASA)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0068",
+      "CVE-NOUVY-2026-0027"
+    ],
+    "product": "Cisco ASA"
+  },
+  {
+    "id": "TKT-0309",
+    "timestamp": "2026-10-26T00:48:51Z",
+    "source": "Wazuh",
+    "category": "PowerShell suspect",
+    "host": "WKS-SUPPORT04",
+    "user": "svc_ldap",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-SUPPORT04",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0310",
+    "timestamp": "2026-10-11T08:55:04Z",
+    "source": "CrowdStrike Falcon",
+    "category": "PowerShell suspect",
+    "host": "SRV-WEB01",
+    "user": "svc_ad",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-WEB01",
+    "process_tree": [
+      "svchost.exe",
+      "powershell.exe",
+      "wscript.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0311",
+    "timestamp": "2026-10-18T06:48:55Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "lin-jump-01",
+    "event": "KB manquante depuis 32 jours sur lin-jump-01 (Ubuntu 22.04)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0060",
+      "CVE-NOUVY-2026-0028",
+      "CVE-NOUVY-2025-0068"
+    ],
+    "product": "Ubuntu 22.04"
+  },
+  {
+    "id": "TKT-0312",
+    "timestamp": "2026-10-22T18:44:32Z",
+    "source": "Wazuh",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-RH01",
+    "user": "admin",
+    "event": "RMM TeamViewer utilisé par le support IT",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0313",
+    "timestamp": "2026-10-20T13:10:03Z",
+    "source": "Elastic SIEM",
+    "category": "Autre",
+    "host": "lin-k8s-02",
+    "user": "n.bernard",
+    "event": "Compte dormant réactivé après 180 jours"
+  },
+  {
+    "id": "TKT-0314",
+    "timestamp": "2026-10-31T00:03:30Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Scan de port",
+    "host": "lin-ansible-01",
+    "event": "Scan de 339 ports détecté vers lin-ansible-01 en moins de 2 minutes",
+    "source_ip": "80.82.78.202",
+    "scanned_ports": 339
+  },
+  {
+    "id": "TKT-0315",
+    "timestamp": "2026-10-15T02:36:08Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMPTA02",
+    "user": "admin",
+    "event": "Utilisateur admin a cliqué sur un lien malveillant depuis WKS-COMPTA02",
+    "url_clicked": "https://docusign-reader-pdf.com/login",
+    "sender": "no-reply@docusign-reader-pdf.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0316",
+    "timestamp": "2026-10-18T04:59:18Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "WKS-DEV03",
+    "user": "administrator",
+    "event": "596 tentatives RDP échouées en moins de 30 minutes sur WKS-DEV03",
+    "source_ip": "185.220.101.5",
+    "port": 3389,
+    "failed_attempts": 596
+  },
+  {
+    "id": "TKT-0317",
+    "timestamp": "2026-10-09T17:18:01Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-DC01",
+    "user": "k.simon",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0318",
+    "timestamp": "2026-10-12T16:51:47Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "SRV-FILE01",
+    "user": "s.lopez",
+    "event": "Utilisateur s.lopez a cliqué sur un lien malveillant depuis SRV-FILE01",
+    "url_clicked": "https://support-france-impots.net/login",
+    "sender": "no-reply@support-france-impots.net",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0319",
+    "timestamp": "2026-10-01T15:47:27Z",
+    "source": "Wazuh",
+    "category": "Scan de port",
+    "host": "lin-k8s-01",
+    "event": "Scan de 71 ports détecté vers lin-k8s-01 en moins de 2 minutes",
+    "source_ip": "45.142.212.17",
+    "scanned_ports": 71
+  },
+  {
+    "id": "TKT-0320",
+    "timestamp": "2026-10-19T17:50:47Z",
+    "source": "Splunk ES",
+    "category": "Scan de port",
+    "host": "lin-elk-01",
+    "event": "Scan de 246 ports détecté vers lin-elk-01 en moins de 2 minutes",
+    "source_ip": "162.158.78.5",
+    "scanned_ports": 246
+  },
+  {
+    "id": "TKT-0321",
+    "timestamp": "2026-10-23T04:48:45Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "SRV-PRINT01",
+    "user": "s.lopez",
+    "event": "Utilisateur s.lopez a cliqué sur un lien malveillant depuis SRV-PRINT01",
+    "url_clicked": "https://support-france-impots.net/login",
+    "sender": "no-reply@support-france-impots.net",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0322",
+    "timestamp": "2026-10-02T22:07:01Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA01",
+    "user": "c.robert",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0323",
+    "timestamp": "2026-10-05T08:39:40Z",
+    "source": "Darktrace",
+    "category": "Scan de port",
+    "host": "SRV-PRINT01",
+    "event": "Scan de 43 ports détecté vers SRV-PRINT01 en moins de 2 minutes",
+    "source_ip": "165.227.195.102",
+    "scanned_ports": 43
+  },
+  {
+    "id": "TKT-0324",
+    "timestamp": "2026-10-29T11:29:47Z",
+    "source": "Infoblox",
+    "category": "Exfiltration DNS",
+    "host": "lin-mail-01",
+    "event": "Volume anormal de requêtes DNS TXT (363 Mo en 1h) depuis lin-mail-01",
+    "domain_pattern": "*.beacon.darkweb.io",
+    "volume_mb": 363
+  },
+  {
+    "id": "TKT-0325",
+    "timestamp": "2026-10-09T14:54:19Z",
+    "source": "Microsoft Sentinel",
+    "category": "Brute force RDP",
+    "host": "lin-dns-01",
+    "user": "svc_sql",
+    "event": "1463 tentatives RDP échouées en moins de 30 minutes sur lin-dns-01",
+    "source_ip": "45.137.21.9",
+    "port": 3389,
+    "failed_attempts": 1463
+  },
+  {
+    "id": "TKT-0326",
+    "timestamp": "2026-10-27T15:30:15Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "WKS-MKT02",
+    "user": "admin",
+    "event": "900 tentatives RDP échouées en moins de 30 minutes sur WKS-MKT02",
+    "source_ip": "80.82.77.33",
+    "port": 3389,
+    "failed_attempts": 900
+  },
+  {
+    "id": "TKT-0327",
+    "timestamp": "2026-10-26T14:31:14Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-DC01",
+    "user": "y.perrin",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0328",
+    "timestamp": "2026-10-07T10:41:05Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-RH01",
+    "user": "f.laurent",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0329",
+    "timestamp": "2026-10-30T01:35:51Z",
+    "source": "Darktrace",
+    "category": "Exfiltration DNS",
+    "host": "SRV-PRINT01",
+    "event": "Volume anormal de requêtes DNS TXT (96 Mo en 1h) depuis SRV-PRINT01",
+    "domain_pattern": "*.data.evil-exfil.com",
+    "volume_mb": 96
+  },
+  {
+    "id": "TKT-0330",
+    "timestamp": "2026-10-21T08:49:49Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "WKS-COMM05",
+    "user": "admin",
+    "event": "1770 tentatives RDP échouées en moins de 30 minutes sur WKS-COMM05",
+    "source_ip": "92.63.197.8",
+    "port": 3389,
+    "failed_attempts": 1770
+  },
+  {
+    "id": "TKT-0331",
+    "timestamp": "2026-10-08T03:03:25Z",
+    "source": "Darktrace",
+    "category": "Autre",
+    "host": "lin-backup-01",
+    "user": "m.dupont",
+    "event": "Baseline de performance CPU dépassée de 400%"
+  },
+  {
+    "id": "TKT-0332",
+    "timestamp": "2026-10-07T10:06:05Z",
+    "source": "Microsoft Defender XDR",
+    "category": "PowerShell suspect",
+    "host": "SRV-WSUS01",
+    "user": "l.diallo",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-WSUS01",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0333",
+    "timestamp": "2026-10-17T02:16:45Z",
+    "source": "Darktrace",
+    "category": "C2 beaconing",
+    "host": "lin-dns-01",
+    "event": "Communications régulières (toutes les 308s) détectées depuis lin-dns-01 vers IP externe",
+    "destination_ip": "193.142.146.198",
+    "destination_port": 53,
+    "beacon_interval_s": 308
+  },
+  {
+    "id": "TKT-0334",
+    "timestamp": "2026-10-12T01:25:03Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "lin-postgres-01",
+    "event": "KB manquante depuis 61 jours sur lin-postgres-01 (Fortinet FortiGate)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0019",
+      "CVE-NOUVY-2025-0019",
+      "CVE-NOUVY-2025-0050"
+    ],
+    "product": "Fortinet FortiGate"
+  },
+  {
+    "id": "TKT-0335",
+    "timestamp": "2026-10-31T18:28:29Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Scan de port",
+    "host": "lin-postgres-01",
+    "event": "Scan de 357 ports détecté vers lin-postgres-01 en moins de 2 minutes",
+    "source_ip": "80.82.77.33",
+    "scanned_ports": 357
+  },
+  {
+    "id": "TKT-0336",
+    "timestamp": "2026-10-02T05:59:54Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "g.rousseau",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0337",
+    "timestamp": "2026-10-01T22:21:52Z",
+    "source": "Elastic SIEM",
+    "category": "C2 beaconing",
+    "host": "lin-jump-01",
+    "event": "Communications régulières (toutes les 39s) détectées depuis lin-jump-01 vers IP externe",
+    "destination_ip": "80.82.78.202",
+    "destination_port": 8080,
+    "beacon_interval_s": 39
+  },
+  {
+    "id": "TKT-0338",
+    "timestamp": "2026-10-27T18:37:01Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Brute force RDP",
+    "host": "WKS-DIR01",
+    "user": "administrator",
+    "event": "1430 tentatives RDP échouées en moins de 30 minutes sur WKS-DIR01",
+    "source_ip": "45.148.10.33",
+    "port": 3389,
+    "failed_attempts": 1430
+  },
+  {
+    "id": "TKT-0339",
+    "timestamp": "2026-10-20T16:47:56Z",
+    "source": "Wazuh",
+    "category": "Brute force RDP",
+    "host": "WKS-RH01",
+    "user": "user1",
+    "event": "1937 tentatives RDP échouées en moins de 30 minutes sur WKS-RH01",
+    "source_ip": "80.82.78.202",
+    "port": 3389,
+    "failed_attempts": 1937
+  },
+  {
+    "id": "TKT-0340",
+    "timestamp": "2026-10-30T01:14:13Z",
+    "source": "Darktrace",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-SUPPORT04",
+    "user": "l.diallo",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0341",
+    "timestamp": "2026-10-31T03:41:53Z",
+    "source": "Wazuh",
+    "category": "Brute force RDP",
+    "host": "SRV-EXCH01",
+    "user": "user1",
+    "event": "995 tentatives RDP échouées en moins de 30 minutes sur SRV-EXCH01",
+    "source_ip": "167.99.233.17",
+    "port": 3389,
+    "failed_attempts": 995
+  },
+  {
+    "id": "TKT-0342",
+    "timestamp": "2026-10-11T03:49:25Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "lin-k8s-01",
+    "user": "j.martin",
+    "event": "566 tentatives RDP échouées en moins de 30 minutes sur lin-k8s-01",
+    "source_ip": "80.82.78.202",
+    "port": 3389,
+    "failed_attempts": 566
+  },
+  {
+    "id": "TKT-0343",
+    "timestamp": "2026-10-01T12:43:27Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "administrator",
+    "event": "Modification sensible AD: msDS-AllowedToDelegateTo changé par administrator",
+    "attribute_changed": "msDS-AllowedToDelegateTo"
+  },
+  {
+    "id": "TKT-0344",
+    "timestamp": "2026-10-13T18:26:23Z",
+    "source": "Trellix EDR",
+    "category": "C2 beaconing",
+    "host": "lin-k8s-01",
+    "event": "Communications régulières (toutes les 165s) détectées depuis lin-k8s-01 vers IP externe",
+    "destination_ip": "45.148.10.33",
+    "destination_port": 53,
+    "beacon_interval_s": 165
+  },
+  {
+    "id": "TKT-0345",
+    "timestamp": "2026-10-14T12:00:45Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WEB01",
+    "user": "admin",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0346",
+    "timestamp": "2026-10-11T03:35:43Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Scan de port",
+    "host": "lin-k8s-02",
+    "event": "Scan de 43 ports détecté vers lin-k8s-02 en moins de 2 minutes",
+    "source_ip": "198.51.100.17",
+    "scanned_ports": 43
+  },
+  {
+    "id": "TKT-0347",
+    "timestamp": "2026-10-18T05:31:18Z",
+    "source": "Wazuh",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "y.perrin",
+    "event": "Mise à jour légitime Adobe Reader bloquée",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0348",
+    "timestamp": "2026-10-07T03:54:52Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Scan de port",
+    "host": "lin-grafana-01",
+    "event": "Scan de 151 ports détecté vers lin-grafana-01 en moins de 2 minutes",
+    "source_ip": "193.142.146.198",
+    "scanned_ports": 151
+  },
+  {
+    "id": "TKT-0349",
+    "timestamp": "2026-10-04T02:56:44Z",
+    "source": "Wazuh",
+    "category": "PowerShell suspect",
+    "host": "WKS-MKT02",
+    "user": "r.thomas",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-MKT02",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0350",
+    "timestamp": "2026-10-26T11:14:40Z",
+    "source": "Microsoft Sentinel",
+    "category": "Brute force RDP",
+    "host": "WKS-DIR01",
+    "user": "user1",
+    "event": "1293 tentatives RDP échouées en moins de 30 minutes sur WKS-DIR01",
+    "source_ip": "45.142.212.17",
+    "port": 3389,
+    "failed_attempts": 1293
+  },
+  {
+    "id": "TKT-0351",
+    "timestamp": "2026-10-26T17:49:30Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Brute force RDP",
+    "host": "WKS-MKT02",
+    "user": "user1",
+    "event": "1311 tentatives RDP échouées en moins de 30 minutes sur WKS-MKT02",
+    "source_ip": "198.51.100.42",
+    "port": 3389,
+    "failed_attempts": 1311
+  },
+  {
+    "id": "TKT-0352",
+    "timestamp": "2026-10-09T08:28:56Z",
+    "source": "Microsoft Sentinel",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "a.chen",
+    "event": "Modification sensible AD: AdminCount flag changé par a.chen",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0353",
+    "timestamp": "2026-10-23T07:32:35Z",
+    "source": "SentinelOne",
+    "category": "Scan de port",
+    "host": "lin-elk-01",
+    "event": "Scan de 282 ports détecté vers lin-elk-01 en moins de 2 minutes",
+    "source_ip": "193.142.146.198",
+    "scanned_ports": 282
+  },
+  {
+    "id": "TKT-0354",
+    "timestamp": "2026-10-01T06:10:40Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Autre",
+    "host": "SRV-SQL01",
+    "user": "administrator",
+    "event": "Clé USB inconnue connectée sur un poste de direction"
+  },
+  {
+    "id": "TKT-0355",
+    "timestamp": "2026-10-29T02:52:45Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "y.perrin",
+    "event": "Modification sensible AD: AdminCount flag changé par y.perrin",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0356",
+    "timestamp": "2026-10-03T01:18:01Z",
+    "source": "SentinelOne",
+    "category": "Autre",
+    "host": "WKS-COMM12",
+    "user": "l.diallo",
+    "event": "Certificat auto-signé déployé sur un service public"
+  },
+  {
+    "id": "TKT-0357",
+    "timestamp": "2026-10-24T06:20:07Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "WKS-DIR01",
+    "user": "admin",
+    "event": "297 tentatives RDP échouées en moins de 30 minutes sur WKS-DIR01",
+    "source_ip": "91.189.189.42",
+    "port": 3389,
+    "failed_attempts": 297
+  },
+  {
+    "id": "TKT-0358",
+    "timestamp": "2026-10-16T08:02:48Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "WKS-RH01",
+    "user": "k.simon",
+    "event": "Utilisateur k.simon a cliqué sur un lien malveillant depuis WKS-RH01",
+    "url_clicked": "https://sharefile-document-view.com/login",
+    "sender": "no-reply@sharefile-document-view.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0359",
+    "timestamp": "2026-10-05T09:24:11Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA01",
+    "user": "svc_ldap",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0360",
+    "timestamp": "2026-10-30T22:14:22Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "WKS-COMPTA01",
+    "event": "KB manquante depuis 25 jours sur WKS-COMPTA01 (SQL Server 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0051",
+      "CVE-NOUVY-2026-0003",
+      "CVE-NOUVY-2025-0062"
+    ],
+    "product": "SQL Server 2019"
+  },
+  {
+    "id": "TKT-0361",
+    "timestamp": "2026-10-12T01:31:54Z",
+    "source": "Darktrace",
+    "category": "C2 beaconing",
+    "host": "lin-ansible-01",
+    "event": "Communications régulières (toutes les 553s) détectées depuis lin-ansible-01 vers IP externe",
+    "destination_ip": "45.148.10.33",
+    "destination_port": 4444,
+    "beacon_interval_s": 553
+  },
+  {
+    "id": "TKT-0362",
+    "timestamp": "2026-10-18T01:39:04Z",
+    "source": "Microsoft Sentinel",
+    "category": "Brute force RDP",
+    "host": "lin-backup-01",
+    "user": "user1",
+    "event": "1836 tentatives RDP échouées en moins de 30 minutes sur lin-backup-01",
+    "source_ip": "91.223.82.5",
+    "port": 3389,
+    "failed_attempts": 1836
+  },
+  {
+    "id": "TKT-0363",
+    "timestamp": "2026-10-20T02:24:24Z",
+    "source": "Darktrace",
+    "category": "PowerShell suspect",
+    "host": "SRV-SQL01",
+    "user": "admin",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-SQL01",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0364",
+    "timestamp": "2026-10-09T02:02:58Z",
+    "source": "BloxOne",
+    "category": "Exfiltration DNS",
+    "host": "SRV-PRINT01",
+    "event": "Volume anormal de requêtes DNS TXT (369 Mo en 1h) depuis SRV-PRINT01",
+    "domain_pattern": "*.beacon.darkweb.io",
+    "volume_mb": 369
+  },
+  {
+    "id": "TKT-0365",
+    "timestamp": "2026-10-13T07:09:41Z",
+    "source": "Splunk ES",
+    "category": "Brute force RDP",
+    "host": "lin-elk-01",
+    "user": "l.diallo",
+    "event": "1062 tentatives RDP échouées en moins de 30 minutes sur lin-elk-01",
+    "source_ip": "91.223.82.5",
+    "port": 3389,
+    "failed_attempts": 1062
+  },
+  {
+    "id": "TKT-0366",
+    "timestamp": "2026-10-30T03:33:09Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-DEV03",
+    "user": "a.chen",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0367",
+    "timestamp": "2026-10-10T12:30:31Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Autre",
+    "host": "SRV-SQL01",
+    "user": "y.perrin",
+    "event": "Clé USB inconnue connectée sur un poste de direction"
+  },
+  {
+    "id": "TKT-0368",
+    "timestamp": "2026-10-28T19:26:15Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "WKS-SUPPORT04",
+    "event": "KB manquante depuis 119 jours sur WKS-SUPPORT04 (Fortinet FortiGate)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0068",
+      "CVE-NOUVY-2026-0025",
+      "CVE-NOUVY-2025-0001"
+    ],
+    "product": "Fortinet FortiGate"
+  },
+  {
+    "id": "TKT-0369",
+    "timestamp": "2026-10-13T18:02:38Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMPTA02",
+    "user": "y.perrin",
+    "event": "Utilisateur y.perrin a cliqué sur un lien malveillant depuis WKS-COMPTA02",
+    "url_clicked": "https://docusign-reader-pdf.com/login",
+    "sender": "no-reply@docusign-reader-pdf.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0370",
+    "timestamp": "2026-10-25T18:48:37Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Scan de port",
+    "host": "lin-backup-01",
+    "event": "Scan de 247 ports détecté vers lin-backup-01 en moins de 2 minutes",
+    "source_ip": "198.51.100.42",
+    "scanned_ports": 247
+  },
+  {
+    "id": "TKT-0371",
+    "timestamp": "2026-10-04T03:15:56Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "LAPTOP-SALES07",
+    "event": "Scan de 262 ports détecté vers LAPTOP-SALES07 en moins de 2 minutes",
+    "source_ip": "45.142.212.17",
+    "scanned_ports": 262
+  },
+  {
+    "id": "TKT-0372",
+    "timestamp": "2026-10-04T17:14:41Z",
+    "source": "Wazuh",
+    "category": "Brute force RDP",
+    "host": "WKS-RH01",
+    "user": "admin",
+    "event": "920 tentatives RDP échouées en moins de 30 minutes sur WKS-RH01",
+    "source_ip": "193.142.146.198",
+    "port": 3389,
+    "failed_attempts": 920
+  },
+  {
+    "id": "TKT-0373",
+    "timestamp": "2026-10-15T19:30:37Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-DEV03",
+    "user": "svc_sql",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0374",
+    "timestamp": "2026-10-28T09:47:21Z",
+    "source": "Microsoft Sentinel",
+    "category": "Scan de port",
+    "host": "SRV-SQL01",
+    "event": "Scan de 212 ports détecté vers SRV-SQL01 en moins de 2 minutes",
+    "source_ip": "198.51.100.42",
+    "scanned_ports": 212
+  },
+  {
+    "id": "TKT-0375",
+    "timestamp": "2026-10-14T23:20:17Z",
+    "source": "Infoblox",
+    "category": "Exfiltration DNS",
+    "host": "lin-k8s-01",
+    "event": "Volume anormal de requêtes DNS TXT (132 Mo en 1h) depuis lin-k8s-01",
+    "domain_pattern": "*.beacon.darkweb.io",
+    "volume_mb": 132
+  },
+  {
+    "id": "TKT-0376",
+    "timestamp": "2026-10-20T22:27:10Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "SRV-PRINT01",
+    "user": "e.petit",
+    "event": "Utilisateur e.petit a cliqué sur un lien malveillant depuis SRV-PRINT01",
+    "url_clicked": "https://support-france-impots.net/login",
+    "sender": "no-reply@support-france-impots.net",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0377",
+    "timestamp": "2026-10-22T23:07:43Z",
+    "source": "Trellix EDR",
+    "category": "PowerShell suspect",
+    "host": "WKS-MKT02",
+    "user": "p.henri",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-MKT02",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0378",
+    "timestamp": "2026-10-19T04:14:29Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Brute force RDP",
+    "host": "lin-backup-01",
+    "user": "user1",
+    "event": "1919 tentatives RDP échouées en moins de 30 minutes sur lin-backup-01",
+    "source_ip": "185.220.101.5",
+    "port": 3389,
+    "failed_attempts": 1919
+  },
+  {
+    "id": "TKT-0379",
+    "timestamp": "2026-10-24T10:51:55Z",
+    "source": "Elastic SIEM",
+    "category": "PowerShell suspect",
+    "host": "SRV-DC02",
+    "user": "f.laurent",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-DC02",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0380",
+    "timestamp": "2026-10-26T09:38:47Z",
+    "source": "Darktrace",
+    "category": "Brute force RDP",
+    "host": "SRV-FILE02",
+    "user": "e.petit",
+    "event": "389 tentatives RDP échouées en moins de 30 minutes sur SRV-FILE02",
+    "source_ip": "45.137.21.9",
+    "port": 3389,
+    "failed_attempts": 389
+  },
+  {
+    "id": "TKT-0381",
+    "timestamp": "2026-10-25T06:40:13Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Brute force RDP",
+    "host": "SRV-WEB01",
+    "user": "admin",
+    "event": "1990 tentatives RDP échouées en moins de 30 minutes sur SRV-WEB01",
+    "source_ip": "91.223.82.5",
+    "port": 3389,
+    "failed_attempts": 1990
+  },
+  {
+    "id": "TKT-0382",
+    "timestamp": "2026-10-15T14:20:26Z",
+    "source": "Infoblox",
+    "category": "Exfiltration DNS",
+    "host": "SRV-WEB01",
+    "event": "Volume anormal de requêtes DNS TXT (89 Mo en 1h) depuis SRV-WEB01",
+    "domain_pattern": "*.beacon.darkweb.io",
+    "volume_mb": 89
+  },
+  {
+    "id": "TKT-0383",
+    "timestamp": "2026-10-05T16:31:05Z",
+    "source": "Splunk ES",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMPTA02",
+    "user": "l.diallo",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMPTA02",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0384",
+    "timestamp": "2026-10-19T01:35:29Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "lin-mail-01",
+    "event": "KB manquante depuis 107 jours sur lin-mail-01 (Cisco ASA)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0022"
+    ],
+    "product": "Cisco ASA"
+  },
+  {
+    "id": "TKT-0385",
+    "timestamp": "2026-10-09T20:50:49Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "SRV-DC02",
+    "event": "KB manquante depuis 107 jours sur SRV-DC02 (Cisco ASA)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0070"
+    ],
+    "product": "Cisco ASA"
+  },
+  {
+    "id": "TKT-0386",
+    "timestamp": "2026-10-13T22:09:45Z",
+    "source": "Microsoft Sentinel",
+    "category": "Brute force RDP",
+    "host": "SRV-PRINT01",
+    "user": "c.robert",
+    "event": "523 tentatives RDP échouées en moins de 30 minutes sur SRV-PRINT01",
+    "source_ip": "80.82.78.202",
+    "port": 3389,
+    "failed_attempts": 523
+  },
+  {
+    "id": "TKT-0387",
+    "timestamp": "2026-10-27T23:20:20Z",
+    "source": "Darktrace",
+    "category": "Exfiltration DNS",
+    "host": "lin-grafana-01",
+    "event": "Volume anormal de requêtes DNS TXT (363 Mo en 1h) depuis lin-grafana-01",
+    "domain_pattern": "*.c2.badcorp.net",
+    "volume_mb": 363
+  },
+  {
+    "id": "TKT-0388",
+    "timestamp": "2026-10-16T16:29:31Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "WKS-RH01",
+    "event": "KB manquante depuis 78 jours sur WKS-RH01 (Debian 12)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0024"
+    ],
+    "product": "Debian 12"
+  },
+  {
+    "id": "TKT-0389",
+    "timestamp": "2026-10-20T01:36:41Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA02",
+    "user": "a.chen",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0390",
+    "timestamp": "2026-10-18T10:25:37Z",
+    "source": "Elastic SIEM",
+    "category": "C2 beaconing",
+    "host": "WKS-DEV03",
+    "event": "Communications régulières (toutes les 189s) détectées depuis WKS-DEV03 vers IP externe",
+    "destination_ip": "198.51.100.17",
+    "destination_port": 53,
+    "beacon_interval_s": 189
+  },
+  {
+    "id": "TKT-0391",
+    "timestamp": "2026-10-13T08:59:50Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "PowerShell suspect",
+    "host": "WKS-RH01",
+    "user": "e.petit",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-RH01",
+    "process_tree": [
+      "svchost.exe",
+      "powershell.exe",
+      "wscript.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0392",
+    "timestamp": "2026-10-14T21:23:04Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "lin-nginx-01",
+    "user": "user1",
+    "event": "1141 tentatives RDP échouées en moins de 30 minutes sur lin-nginx-01",
+    "source_ip": "185.220.101.5",
+    "port": 3389,
+    "failed_attempts": 1141
+  },
+  {
+    "id": "TKT-0393",
+    "timestamp": "2026-10-27T19:43:39Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "lin-jump-01",
+    "event": "KB manquante depuis 31 jours sur lin-jump-01 (Microsoft Exchange 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0021"
+    ],
+    "product": "Microsoft Exchange 2019"
+  },
+  {
+    "id": "TKT-0394",
+    "timestamp": "2026-10-14T13:29:55Z",
+    "source": "Splunk ES",
+    "category": "PowerShell suspect",
+    "host": "WKS-DEV03",
+    "user": "y.perrin",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-DEV03",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0395",
+    "timestamp": "2026-10-27T09:04:41Z",
+    "source": "Elastic SIEM",
+    "category": "Scan de port",
+    "host": "SRV-FILE02",
+    "event": "Scan de 198 ports détecté vers SRV-FILE02 en moins de 2 minutes",
+    "source_ip": "167.99.233.17",
+    "scanned_ports": 198
+  },
+  {
+    "id": "TKT-0396",
+    "timestamp": "2026-10-18T11:48:09Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "lin-postgres-01",
+    "event": "KB manquante depuis 92 jours sur lin-postgres-01 (SQL Server 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0049",
+      "CVE-NOUVY-2024-0011",
+      "CVE-NOUVY-2024-0012",
+      "CVE-NOUVY-2024-0010"
+    ],
+    "product": "SQL Server 2019"
+  },
+  {
+    "id": "TKT-0397",
+    "timestamp": "2026-10-02T02:03:14Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "administrator",
+    "event": "Modification sensible AD: AdminCount flag changé par administrator",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0398",
+    "timestamp": "2026-10-20T07:41:18Z",
+    "source": "Splunk ES",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "o.fontaine",
+    "event": "Modification sensible AD: userAccountControl (password-never-expires) changé par o.fontaine",
+    "attribute_changed": "userAccountControl (password-never-expires)"
+  },
+  {
+    "id": "TKT-0399",
+    "timestamp": "2026-10-22T04:20:07Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "LAPTOP-SALES07",
+    "user": "g.rousseau",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0400",
+    "timestamp": "2026-10-18T07:19:51Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Scan de port",
+    "host": "lin-jump-01",
+    "event": "Scan de 129 ports détecté vers lin-jump-01 en moins de 2 minutes",
+    "source_ip": "91.189.189.42",
+    "scanned_ports": 129
+  },
+  {
+    "id": "TKT-0401",
+    "timestamp": "2026-10-22T12:52:48Z",
+    "source": "Trellix EDR",
+    "category": "Brute force RDP",
+    "host": "lin-backup-01",
+    "user": "s.lopez",
+    "event": "640 tentatives RDP échouées en moins de 30 minutes sur lin-backup-01",
+    "source_ip": "193.142.146.198",
+    "port": 3389,
+    "failed_attempts": 640
+  },
+  {
+    "id": "TKT-0402",
+    "timestamp": "2026-10-15T11:46:13Z",
+    "source": "Wazuh",
+    "category": "C2 beaconing",
+    "host": "SRV-DC01",
+    "event": "Communications régulières (toutes les 198s) détectées depuis SRV-DC01 vers IP externe",
+    "destination_ip": "80.82.78.202",
+    "destination_port": 8443,
+    "beacon_interval_s": 198
+  },
+  {
+    "id": "TKT-0403",
+    "timestamp": "2026-10-04T17:48:26Z",
+    "source": "Darktrace",
+    "category": "Brute force RDP",
+    "host": "SRV-SQL01",
+    "user": "admin",
+    "event": "558 tentatives RDP échouées en moins de 30 minutes sur SRV-SQL01",
+    "source_ip": "167.99.233.17",
+    "port": 3389,
+    "failed_attempts": 558
+  },
+  {
+    "id": "TKT-0404",
+    "timestamp": "2026-10-25T04:40:16Z",
+    "source": "Wazuh",
+    "category": "PowerShell suspect",
+    "host": "SRV-DC01",
+    "user": "admin",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-DC01",
+    "process_tree": [
+      "svchost.exe",
+      "powershell.exe",
+      "wscript.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0405",
+    "timestamp": "2026-10-28T13:41:50Z",
+    "source": "SentinelOne",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-SQL01",
+    "user": "c.robert",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0406",
+    "timestamp": "2026-10-28T02:12:51Z",
+    "source": "Darktrace",
+    "category": "Faux positif (fichier office)",
+    "host": "LAPTOP-SALES07",
+    "user": "o.fontaine",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0407",
+    "timestamp": "2026-10-27T14:56:22Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "SRV-FILE01",
+    "user": "svc_ldap",
+    "event": "Utilisateur svc_ldap a cliqué sur un lien malveillant depuis SRV-FILE01",
+    "url_clicked": "https://microsft-support-portal.net/login",
+    "sender": "no-reply@microsft-support-portal.net",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0408",
+    "timestamp": "2026-10-22T13:25:01Z",
+    "source": "Darktrace",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-SQL01",
+    "user": "a.chen",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0409",
+    "timestamp": "2026-10-25T03:57:36Z",
+    "source": "Elastic SIEM",
+    "category": "C2 beaconing",
+    "host": "WKS-COMPTA01",
+    "event": "Communications régulières (toutes les 291s) détectées depuis WKS-COMPTA01 vers IP externe",
+    "destination_ip": "91.223.82.5",
+    "destination_port": 8443,
+    "beacon_interval_s": 291
+  },
+  {
+    "id": "TKT-0410",
+    "timestamp": "2026-10-22T13:55:58Z",
+    "source": "Splunk ES",
+    "category": "Scan de port",
+    "host": "lin-nginx-01",
+    "event": "Scan de 457 ports détecté vers lin-nginx-01 en moins de 2 minutes",
+    "source_ip": "198.51.100.17",
+    "scanned_ports": 457
+  },
+  {
+    "id": "TKT-0411",
+    "timestamp": "2026-10-26T13:58:03Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-FILE02",
+    "user": "m.dupont",
+    "event": "RMM TeamViewer utilisé par le support IT",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0412",
+    "timestamp": "2026-10-26T04:04:45Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMM05",
+    "user": "admin",
+    "event": "Utilisateur admin a cliqué sur un lien malveillant depuis WKS-COMM05",
+    "url_clicked": "https://microsft-support-portal.net/login",
+    "sender": "no-reply@microsft-support-portal.net",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0413",
+    "timestamp": "2026-10-12T22:09:32Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-PRINT01",
+    "user": "l.diallo",
+    "event": "Mise à jour légitime Adobe Reader bloquée",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0414",
+    "timestamp": "2026-10-17T07:39:02Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "SRV-WEB01",
+    "event": "Scan de 241 ports détecté vers SRV-WEB01 en moins de 2 minutes",
+    "source_ip": "198.51.100.17",
+    "scanned_ports": 241
+  },
+  {
+    "id": "TKT-0415",
+    "timestamp": "2026-10-23T09:15:17Z",
+    "source": "SentinelOne",
+    "category": "Brute force RDP",
+    "host": "lin-jump-01",
+    "user": "administrator",
+    "event": "208 tentatives RDP échouées en moins de 30 minutes sur lin-jump-01",
+    "source_ip": "45.142.212.17",
+    "port": 3389,
+    "failed_attempts": 208
+  },
+  {
+    "id": "TKT-0416",
+    "timestamp": "2026-10-26T16:17:52Z",
+    "source": "Splunk ES",
+    "category": "Brute force RDP",
+    "host": "lin-k8s-02",
+    "user": "user1",
+    "event": "1963 tentatives RDP échouées en moins de 30 minutes sur lin-k8s-02",
+    "source_ip": "167.99.123.4",
+    "port": 3389,
+    "failed_attempts": 1963
+  },
+  {
+    "id": "TKT-0417",
+    "timestamp": "2026-10-09T05:50:44Z",
+    "source": "Elastic SIEM",
+    "category": "PowerShell suspect",
+    "host": "WKS-DEV03",
+    "user": "svc_sql",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-DEV03",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0418",
+    "timestamp": "2026-10-16T02:23:16Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WSUS01",
+    "user": "svc_ldap",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0419",
+    "timestamp": "2026-10-27T12:23:07Z",
+    "source": "Darktrace",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA01",
+    "user": "svc_sql",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0420",
+    "timestamp": "2026-10-21T09:39:34Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "WKS-MKT02",
+    "event": "KB manquante depuis 79 jours sur WKS-MKT02 (Debian 12)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0072",
+      "CVE-NOUVY-2025-0069"
+    ],
+    "product": "Debian 12"
+  },
+  {
+    "id": "TKT-0421",
+    "timestamp": "2026-10-23T11:13:28Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Scan de port",
+    "host": "WKS-MKT02",
+    "event": "Scan de 26 ports détecté vers WKS-MKT02 en moins de 2 minutes",
+    "source_ip": "91.223.82.5",
+    "scanned_ports": 26
+  },
+  {
+    "id": "TKT-0422",
+    "timestamp": "2026-10-29T07:26:21Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Scan de port",
+    "host": "lin-dns-01",
+    "event": "Scan de 241 ports détecté vers lin-dns-01 en moins de 2 minutes",
+    "source_ip": "80.82.77.33",
+    "scanned_ports": 241
+  },
+  {
+    "id": "TKT-0423",
+    "timestamp": "2026-10-23T14:04:57Z",
+    "source": "Elastic SIEM",
+    "category": "Scan de port",
+    "host": "SRV-WEB01",
+    "event": "Scan de 261 ports détecté vers SRV-WEB01 en moins de 2 minutes",
+    "source_ip": "198.51.100.42",
+    "scanned_ports": 261
+  },
+  {
+    "id": "TKT-0424",
+    "timestamp": "2026-10-02T12:40:19Z",
+    "source": "Microsoft Sentinel",
+    "category": "C2 beaconing",
+    "host": "lin-postgres-01",
+    "event": "Communications régulières (toutes les 199s) détectées depuis lin-postgres-01 vers IP externe",
+    "destination_ip": "80.82.78.202",
+    "destination_port": 443,
+    "beacon_interval_s": 199
+  },
+  {
+    "id": "TKT-0425",
+    "timestamp": "2026-10-19T02:00:16Z",
+    "source": "Microsoft Sentinel",
+    "category": "C2 beaconing",
+    "host": "SRV-APP01",
+    "event": "Communications régulières (toutes les 47s) détectées depuis SRV-APP01 vers IP externe",
+    "destination_ip": "185.220.101.33",
+    "destination_port": 443,
+    "beacon_interval_s": 47
+  },
+  {
+    "id": "TKT-0426",
+    "timestamp": "2026-10-12T09:46:20Z",
+    "source": "Darktrace",
+    "category": "Scan de port",
+    "host": "lin-k8s-02",
+    "event": "Scan de 90 ports détecté vers lin-k8s-02 en moins de 2 minutes",
+    "source_ip": "193.142.146.198",
+    "scanned_ports": 90
+  },
+  {
+    "id": "TKT-0427",
+    "timestamp": "2026-10-06T14:24:17Z",
+    "source": "Trellix EDR",
+    "category": "PowerShell suspect",
+    "host": "WKS-MKT02",
+    "user": "f.laurent",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-MKT02",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0428",
+    "timestamp": "2026-10-17T02:19:29Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Scan de port",
+    "host": "SRV-FILE02",
+    "event": "Scan de 190 ports détecté vers SRV-FILE02 en moins de 2 minutes",
+    "source_ip": "185.220.101.33",
+    "scanned_ports": 190
+  },
+  {
+    "id": "TKT-0429",
+    "timestamp": "2026-10-09T17:07:29Z",
+    "source": "SentinelOne",
+    "category": "Brute force RDP",
+    "host": "lin-grafana-01",
+    "user": "p.henri",
+    "event": "78 tentatives RDP échouées en moins de 30 minutes sur lin-grafana-01",
+    "source_ip": "203.0.113.5",
+    "port": 3389,
+    "failed_attempts": 78
+  },
+  {
+    "id": "TKT-0430",
+    "timestamp": "2026-10-10T09:54:10Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "WKS-MKT02",
+    "user": "c.robert",
+    "event": "Utilisateur c.robert a cliqué sur un lien malveillant depuis WKS-MKT02",
+    "url_clicked": "https://sharefile-document-view.com/login",
+    "sender": "no-reply@sharefile-document-view.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0431",
+    "timestamp": "2026-10-19T12:27:11Z",
+    "source": "Palo Alto Cortex XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-DEV03",
+    "user": "o.fontaine",
+    "event": "Mise à jour légitime Adobe Reader bloquée",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0432",
+    "timestamp": "2026-10-01T02:45:40Z",
+    "source": "Splunk ES",
+    "category": "PowerShell suspect",
+    "host": "WKS-SUPPORT04",
+    "user": "f.laurent",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-SUPPORT04",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0433",
+    "timestamp": "2026-10-24T04:26:55Z",
+    "source": "Wazuh",
+    "category": "Brute force RDP",
+    "host": "lin-ansible-01",
+    "user": "c.robert",
+    "event": "81 tentatives RDP échouées en moins de 30 minutes sur lin-ansible-01",
+    "source_ip": "92.63.197.8",
+    "port": 3389,
+    "failed_attempts": 81
+  },
+  {
+    "id": "TKT-0434",
+    "timestamp": "2026-10-27T20:38:08Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-DIR01",
+    "user": "svc_backup",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0435",
+    "timestamp": "2026-10-23T09:58:21Z",
+    "source": "SentinelOne",
+    "category": "Scan de port",
+    "host": "WKS-COMPTA02",
+    "event": "Scan de 149 ports détecté vers WKS-COMPTA02 en moins de 2 minutes",
+    "source_ip": "185.220.101.5",
+    "scanned_ports": 149
+  },
+  {
+    "id": "TKT-0436",
+    "timestamp": "2026-10-12T00:23:19Z",
+    "source": "Wazuh",
+    "category": "Scan de port",
+    "host": "lin-dns-01",
+    "event": "Scan de 270 ports détecté vers lin-dns-01 en moins de 2 minutes",
+    "source_ip": "91.189.189.42",
+    "scanned_ports": 270
+  },
+  {
+    "id": "TKT-0437",
+    "timestamp": "2026-10-25T06:28:19Z",
+    "source": "Darktrace",
+    "category": "Exfiltration DNS",
+    "host": "lin-nginx-01",
+    "event": "Volume anormal de requêtes DNS TXT (498 Mo en 1h) depuis lin-nginx-01",
+    "domain_pattern": "*.c2.badcorp.net",
+    "volume_mb": 498
+  },
+  {
+    "id": "TKT-0438",
+    "timestamp": "2026-10-11T19:08:38Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Scan de port",
+    "host": "SRV-FILE01",
+    "event": "Scan de 348 ports détecté vers SRV-FILE01 en moins de 2 minutes",
+    "source_ip": "45.142.212.17",
+    "scanned_ports": 348
+  },
+  {
+    "id": "TKT-0439",
+    "timestamp": "2026-10-23T20:31:36Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA01",
+    "user": "e.petit",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0440",
+    "timestamp": "2026-10-06T21:24:10Z",
+    "source": "Wazuh",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-EXCH01",
+    "user": "g.rousseau",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0441",
+    "timestamp": "2026-10-03T22:15:22Z",
+    "source": "Darktrace",
+    "category": "Exfiltration DNS",
+    "host": "lin-k8s-01",
+    "event": "Volume anormal de requêtes DNS TXT (80 Mo en 1h) depuis lin-k8s-01",
+    "domain_pattern": "*.beacon.darkweb.io",
+    "volume_mb": 80
+  },
+  {
+    "id": "TKT-0442",
+    "timestamp": "2026-10-18T18:37:46Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-APP01",
+    "user": "j.martin",
+    "event": "Script PowerShell signé par la DSI classé comme suspect",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0443",
+    "timestamp": "2026-10-18T00:58:25Z",
+    "source": "Darktrace",
+    "category": "Brute force RDP",
+    "host": "SRV-WSUS01",
+    "user": "administrator",
+    "event": "1324 tentatives RDP échouées en moins de 30 minutes sur SRV-WSUS01",
+    "source_ip": "193.142.146.198",
+    "port": 3389,
+    "failed_attempts": 1324
+  },
+  {
+    "id": "TKT-0444",
+    "timestamp": "2026-10-27T22:49:39Z",
+    "source": "Wazuh",
+    "category": "Scan de port",
+    "host": "WKS-COMPTA01",
+    "event": "Scan de 102 ports détecté vers WKS-COMPTA01 en moins de 2 minutes",
+    "source_ip": "162.158.78.5",
+    "scanned_ports": 102
+  },
+  {
+    "id": "TKT-0445",
+    "timestamp": "2026-10-14T22:35:46Z",
+    "source": "Trellix EDR",
+    "category": "Autre",
+    "host": "WKS-COMM12",
+    "user": "e.petit",
+    "event": "Nouveau binaire inconnu dans C:\\Windows\\System32"
+  },
+  {
+    "id": "TKT-0446",
+    "timestamp": "2026-10-10T07:25:44Z",
+    "source": "Microsoft Sentinel",
+    "category": "Brute force RDP",
+    "host": "SRV-DC02",
+    "user": "user1",
+    "event": "240 tentatives RDP échouées en moins de 30 minutes sur SRV-DC02",
+    "source_ip": "167.99.123.4",
+    "port": 3389,
+    "failed_attempts": 240
+  },
+  {
+    "id": "TKT-0447",
+    "timestamp": "2026-10-25T05:34:49Z",
+    "source": "Trellix EDR",
+    "category": "PowerShell suspect",
+    "host": "SRV-APP01",
+    "user": "j.martin",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-APP01",
+    "process_tree": [
+      "explorer.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0448",
+    "timestamp": "2026-10-03T21:54:20Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "SRV-SQL01",
+    "user": "admin",
+    "event": "Utilisateur admin a cliqué sur un lien malveillant depuis SRV-SQL01",
+    "url_clicked": "https://support-france-impots.net/login",
+    "sender": "no-reply@support-france-impots.net",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0449",
+    "timestamp": "2026-10-04T23:48:30Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-WEB01",
+    "user": "n.bernard",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0450",
+    "timestamp": "2026-10-24T06:37:04Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "WKS-COMM12",
+    "event": "KB manquante depuis 69 jours sur WKS-COMM12 (Windows Server 2022)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0020",
+      "CVE-NOUVY-2024-0017",
+      "CVE-NOUVY-2025-0059"
+    ],
+    "product": "Windows Server 2022"
+  },
+  {
+    "id": "TKT-0451",
+    "timestamp": "2026-10-05T17:40:37Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMM12",
+    "user": "admin",
+    "event": "Utilisateur admin a cliqué sur un lien malveillant depuis WKS-COMM12",
+    "url_clicked": "https://docusign-reader-pdf.com/login",
+    "sender": "no-reply@docusign-reader-pdf.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0452",
+    "timestamp": "2026-10-08T18:53:54Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-PRINT01",
+    "user": "a.chen",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0453",
+    "timestamp": "2026-10-30T09:24:26Z",
+    "source": "SentinelOne",
+    "category": "Scan de port",
+    "host": "lin-postgres-01",
+    "event": "Scan de 200 ports détecté vers lin-postgres-01 en moins de 2 minutes",
+    "source_ip": "185.220.101.33",
+    "scanned_ports": 200
+  },
+  {
+    "id": "TKT-0454",
+    "timestamp": "2026-10-17T08:53:10Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Brute force RDP",
+    "host": "lin-postgres-01",
+    "user": "user1",
+    "event": "1137 tentatives RDP échouées en moins de 30 minutes sur lin-postgres-01",
+    "source_ip": "198.51.100.42",
+    "port": 3389,
+    "failed_attempts": 1137
+  },
+  {
+    "id": "TKT-0455",
+    "timestamp": "2026-10-31T05:52:12Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "WKS-COMM12",
+    "user": "k.simon",
+    "event": "Utilisateur k.simon a cliqué sur un lien malveillant depuis WKS-COMM12",
+    "url_clicked": "https://support-france-impots.net/login",
+    "sender": "no-reply@support-france-impots.net",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0456",
+    "timestamp": "2026-10-10T08:52:11Z",
+    "source": "Infoblox",
+    "category": "Exfiltration DNS",
+    "host": "SRV-FILE02",
+    "event": "Volume anormal de requêtes DNS TXT (351 Mo en 1h) depuis SRV-FILE02",
+    "domain_pattern": "*.c2.badcorp.net",
+    "volume_mb": 351
+  },
+  {
+    "id": "TKT-0457",
+    "timestamp": "2026-10-22T09:02:14Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Scan de port",
+    "host": "lin-backup-01",
+    "event": "Scan de 279 ports détecté vers lin-backup-01 en moins de 2 minutes",
+    "source_ip": "185.220.101.33",
+    "scanned_ports": 279
+  },
+  {
+    "id": "TKT-0458",
+    "timestamp": "2026-10-24T17:15:06Z",
+    "source": "Splunk ES",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "r.thomas",
+    "event": "Modification sensible AD: msDS-AllowedToDelegateTo changé par r.thomas",
+    "attribute_changed": "msDS-AllowedToDelegateTo"
+  },
+  {
+    "id": "TKT-0459",
+    "timestamp": "2026-10-04T18:43:34Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "WKS-MKT02",
+    "event": "KB manquante depuis 65 jours sur WKS-MKT02 (Microsoft Exchange 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0038",
+      "CVE-NOUVY-2024-0038",
+      "CVE-NOUVY-2024-0075"
+    ],
+    "product": "Microsoft Exchange 2019"
+  },
+  {
+    "id": "TKT-0460",
+    "timestamp": "2026-10-31T06:08:49Z",
+    "source": "Infoblox",
+    "category": "Exfiltration DNS",
+    "host": "WKS-DIR01",
+    "event": "Volume anormal de requêtes DNS TXT (43 Mo en 1h) depuis WKS-DIR01",
+    "domain_pattern": "*.data.evil-exfil.com",
+    "volume_mb": 43
+  },
+  {
+    "id": "TKT-0461",
+    "timestamp": "2026-10-21T19:01:03Z",
+    "source": "SentinelOne",
+    "category": "Scan de port",
+    "host": "WKS-DEV03",
+    "event": "Scan de 338 ports détecté vers WKS-DEV03 en moins de 2 minutes",
+    "source_ip": "91.223.82.5",
+    "scanned_ports": 338
+  },
+  {
+    "id": "TKT-0462",
+    "timestamp": "2026-10-06T13:31:56Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Autre",
+    "host": "lin-nginx-01",
+    "user": "r.thomas",
+    "event": "GPO modifiée hors fenêtre de maintenance"
+  },
+  {
+    "id": "TKT-0463",
+    "timestamp": "2026-10-03T21:27:12Z",
+    "source": "Wazuh",
+    "category": "Autre",
+    "host": "WKS-COMM12",
+    "user": "svc_backup",
+    "event": "GPO modifiée hors fenêtre de maintenance"
+  },
+  {
+    "id": "TKT-0464",
+    "timestamp": "2026-10-21T02:25:32Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-RH01",
+    "user": "admin",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0465",
+    "timestamp": "2026-10-25T07:43:48Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "lin-ci-01",
+    "event": "KB manquante depuis 82 jours sur lin-ci-01 (Ubuntu 22.04)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0056",
+      "CVE-NOUVY-2026-0021",
+      "CVE-NOUVY-2025-0013",
+      "CVE-NOUVY-2024-0020"
+    ],
+    "product": "Ubuntu 22.04"
+  },
+  {
+    "id": "TKT-0466",
+    "timestamp": "2026-10-20T13:22:46Z",
+    "source": "SentinelOne",
+    "category": "PowerShell suspect",
+    "host": "SRV-DC02",
+    "user": "svc_ldap",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-DC02",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtbm9wIC13IGhpZGRlbg==",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0467",
+    "timestamp": "2026-10-07T14:22:19Z",
+    "source": "Microsoft Sentinel",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMM05",
+    "user": "f.laurent",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMM05",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtZW5jIEpBQnB...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0468",
+    "timestamp": "2026-10-19T03:17:49Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-MKT02",
+    "user": "k.simon",
+    "event": "Macro Office signée interne détectée comme suspecte",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0469",
+    "timestamp": "2026-10-04T19:02:28Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "WKS-DEV03",
+    "event": "KB manquante depuis 46 jours sur WKS-DEV03 (Windows 11 23H2)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0023"
+    ],
+    "product": "Windows 11 23H2"
+  },
+  {
+    "id": "TKT-0470",
+    "timestamp": "2026-10-17T07:26:19Z",
+    "source": "CrowdStrike Falcon",
+    "category": "Faux positif (fichier office)",
+    "host": "SRV-PRINT01",
+    "user": "m.dupont",
+    "event": "Signature Microsoft légitime en whitelist pending",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0471",
+    "timestamp": "2026-10-22T06:45:37Z",
+    "source": "Tenable Nessus",
+    "category": "Mise à jour manquante",
+    "host": "lin-jump-01",
+    "event": "KB manquante depuis 26 jours sur lin-jump-01 (Windows 11 23H2)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0015",
+      "CVE-NOUVY-2025-0037",
+      "CVE-NOUVY-2024-0034",
+      "CVE-NOUVY-2025-0052"
+    ],
+    "product": "Windows 11 23H2"
+  },
+  {
+    "id": "TKT-0472",
+    "timestamp": "2026-10-11T12:17:48Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Brute force RDP",
+    "host": "lin-ansible-01",
+    "user": "administrator",
+    "event": "719 tentatives RDP échouées en moins de 30 minutes sur lin-ansible-01",
+    "source_ip": "167.99.123.4",
+    "port": 3389,
+    "failed_attempts": 719
+  },
+  {
+    "id": "TKT-0473",
+    "timestamp": "2026-10-18T01:22:14Z",
+    "source": "Elastic SIEM",
+    "category": "Brute force RDP",
+    "host": "SRV-DC02",
+    "user": "administrator",
+    "event": "1584 tentatives RDP échouées en moins de 30 minutes sur SRV-DC02",
+    "source_ip": "185.220.101.5",
+    "port": 3389,
+    "failed_attempts": 1584
+  },
+  {
+    "id": "TKT-0474",
+    "timestamp": "2026-10-03T05:17:28Z",
+    "source": "Vade Secure",
+    "category": "Phishing cliqué",
+    "host": "SRV-FILE02",
+    "user": "k.simon",
+    "event": "Utilisateur k.simon a cliqué sur un lien malveillant depuis SRV-FILE02",
+    "url_clicked": "https://docusign-reader-pdf.com/login",
+    "sender": "no-reply@docusign-reader-pdf.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0475",
+    "timestamp": "2026-10-22T13:20:25Z",
+    "source": "CrowdStrike Falcon",
+    "category": "PowerShell suspect",
+    "host": "SRV-PRINT01",
+    "user": "r.thomas",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-PRINT01",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0476",
+    "timestamp": "2026-10-12T07:24:05Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "WKS-RH01",
+    "user": "s.lopez",
+    "event": "Utilisateur s.lopez a cliqué sur un lien malveillant depuis WKS-RH01",
+    "url_clicked": "https://sharefile-document-view.com/login",
+    "sender": "no-reply@sharefile-document-view.com",
+    "credentials_submitted": true
+  },
+  {
+    "id": "TKT-0477",
+    "timestamp": "2026-10-31T15:20:37Z",
+    "source": "Splunk ES",
+    "category": "C2 beaconing",
+    "host": "lin-postgres-01",
+    "event": "Communications régulières (toutes les 495s) détectées depuis lin-postgres-01 vers IP externe",
+    "destination_ip": "193.142.146.198",
+    "destination_port": 53,
+    "beacon_interval_s": 495
+  },
+  {
+    "id": "TKT-0478",
+    "timestamp": "2026-10-16T00:23:21Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "lin-backup-01",
+    "event": "KB manquante depuis 68 jours sur lin-backup-01 (Microsoft Exchange 2019)",
+    "missing_cve": [
+      "CVE-NOUVY-2026-0026",
+      "CVE-NOUVY-2026-0017",
+      "CVE-NOUVY-2026-0002"
+    ],
+    "product": "Microsoft Exchange 2019"
+  },
+  {
+    "id": "TKT-0479",
+    "timestamp": "2026-10-25T21:52:20Z",
+    "source": "Microsoft Sentinel",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA01",
+    "user": "g.rousseau",
+    "event": "Appel sortant vers Teams flaggé comme C2",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0480",
+    "timestamp": "2026-10-24T11:10:08Z",
+    "source": "Trellix EDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMM05",
+    "user": "admin",
+    "event": "Mise à jour légitime Adobe Reader bloquée",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0481",
+    "timestamp": "2026-10-26T09:53:44Z",
+    "source": "Elastic SIEM",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-DIR01",
+    "user": "n.bernard",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0482",
+    "timestamp": "2026-10-27T09:21:35Z",
+    "source": "Darktrace",
+    "category": "C2 beaconing",
+    "host": "WKS-MKT02",
+    "event": "Communications régulières (toutes les 360s) détectées depuis WKS-MKT02 vers IP externe",
+    "destination_ip": "45.142.212.17",
+    "destination_port": 8443,
+    "beacon_interval_s": 360
+  },
+  {
+    "id": "TKT-0483",
+    "timestamp": "2026-10-27T20:39:56Z",
+    "source": "SentinelOne",
+    "category": "PowerShell suspect",
+    "host": "SRV-FILE01",
+    "user": "g.rousseau",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur SRV-FILE01",
+    "process_tree": [
+      "winword.exe",
+      "cmd.exe",
+      "powershell.exe",
+      "rundll32.exe"
+    ],
+    "iocs": {
+      "payload_b64": "SUVYIChOZXctT2JqZWN0IE5l...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0484",
+    "timestamp": "2026-10-06T21:19:52Z",
+    "source": "Infoblox",
+    "category": "Exfiltration DNS",
+    "host": "SRV-EXCH01",
+    "event": "Volume anormal de requêtes DNS TXT (51 Mo en 1h) depuis SRV-EXCH01",
+    "domain_pattern": "*.data.evil-exfil.com",
+    "volume_mb": 51
+  },
+  {
+    "id": "TKT-0485",
+    "timestamp": "2026-10-23T05:58:51Z",
+    "source": "Splunk ES",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "svc_backup",
+    "event": "Modification sensible AD: AdminCount flag changé par svc_backup",
+    "attribute_changed": "AdminCount flag"
+  },
+  {
+    "id": "TKT-0486",
+    "timestamp": "2026-10-24T11:39:27Z",
+    "source": "Proofpoint",
+    "category": "Phishing cliqué",
+    "host": "WKS-DIR01",
+    "user": "svc_ad",
+    "event": "Utilisateur svc_ad a cliqué sur un lien malveillant depuis WKS-DIR01",
+    "url_clicked": "https://login-office365-security.com/login",
+    "sender": "no-reply@login-office365-security.com",
+    "credentials_submitted": false
+  },
+  {
+    "id": "TKT-0487",
+    "timestamp": "2026-10-13T19:47:53Z",
+    "source": "Rapid7 Nexpose",
+    "category": "Mise à jour manquante",
+    "host": "lin-k8s-01",
+    "event": "KB manquante depuis 90 jours sur lin-k8s-01 (Debian 12)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0050",
+      "CVE-NOUVY-2025-0051",
+      "CVE-NOUVY-2025-0057"
+    ],
+    "product": "Debian 12"
+  },
+  {
+    "id": "TKT-0488",
+    "timestamp": "2026-10-12T21:47:44Z",
+    "source": "Trellix EDR",
+    "category": "Scan de port",
+    "host": "lin-elk-01",
+    "event": "Scan de 242 ports détecté vers lin-elk-01 en moins de 2 minutes",
+    "source_ip": "80.82.78.202",
+    "scanned_ports": 242
+  },
+  {
+    "id": "TKT-0489",
+    "timestamp": "2026-10-07T16:15:26Z",
+    "source": "Darktrace",
+    "category": "Exfiltration DNS",
+    "host": "LAPTOP-SALES07",
+    "event": "Volume anormal de requêtes DNS TXT (58 Mo en 1h) depuis LAPTOP-SALES07",
+    "domain_pattern": "*.data.evil-exfil.com",
+    "volume_mb": 58
+  },
+  {
+    "id": "TKT-0490",
+    "timestamp": "2026-10-04T11:54:35Z",
+    "source": "SentinelOne",
+    "category": "Scan de port",
+    "host": "WKS-DIR01",
+    "event": "Scan de 443 ports détecté vers WKS-DIR01 en moins de 2 minutes",
+    "source_ip": "45.137.21.9",
+    "scanned_ports": 443
+  },
+  {
+    "id": "TKT-0491",
+    "timestamp": "2026-10-21T08:45:11Z",
+    "source": "WSUS",
+    "category": "Mise à jour manquante",
+    "host": "WKS-COMPTA01",
+    "event": "KB manquante depuis 109 jours sur WKS-COMPTA01 (Cisco ASA)",
+    "missing_cve": [
+      "CVE-NOUVY-2024-0076",
+      "CVE-NOUVY-2025-0066",
+      "CVE-NOUVY-2026-0013"
+    ],
+    "product": "Cisco ASA"
+  },
+  {
+    "id": "TKT-0492",
+    "timestamp": "2026-10-25T15:12:14Z",
+    "source": "Wazuh",
+    "category": "Scan de port",
+    "host": "lin-k8s-02",
+    "event": "Scan de 495 ports détecté vers lin-k8s-02 en moins de 2 minutes",
+    "source_ip": "45.142.212.17",
+    "scanned_ports": 495
+  },
+  {
+    "id": "TKT-0493",
+    "timestamp": "2026-10-05T15:20:59Z",
+    "source": "Qualys",
+    "category": "Mise à jour manquante",
+    "host": "SRV-WEB01",
+    "event": "KB manquante depuis 15 jours sur SRV-WEB01 (Debian 12)",
+    "missing_cve": [
+      "CVE-NOUVY-2025-0019",
+      "CVE-NOUVY-2024-0061",
+      "CVE-NOUVY-2025-0035"
+    ],
+    "product": "Debian 12"
+  },
+  {
+    "id": "TKT-0494",
+    "timestamp": "2026-10-28T21:58:38Z",
+    "source": "Wazuh",
+    "category": "Scan de port",
+    "host": "WKS-COMM12",
+    "event": "Scan de 380 ports détecté vers WKS-COMM12 en moins de 2 minutes",
+    "source_ip": "198.51.100.42",
+    "scanned_ports": 380
+  },
+  {
+    "id": "TKT-0495",
+    "timestamp": "2026-10-09T01:05:40Z",
+    "source": "Microsoft Defender XDR",
+    "category": "PowerShell suspect",
+    "host": "WKS-COMM12",
+    "user": "p.henri",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-COMM12",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0496",
+    "timestamp": "2026-10-05T06:18:13Z",
+    "source": "Splunk ES",
+    "category": "PowerShell suspect",
+    "host": "WKS-MKT02",
+    "user": "g.rousseau",
+    "event": "PowerShell lancé avec commande encodée base64 détecté sur WKS-MKT02",
+    "process_tree": [
+      "cmd.exe",
+      "powershell.exe"
+    ],
+    "iocs": {
+      "payload_b64": "cG93ZXJzaGVsbCAtQy...",
+      "command_line": "powershell.exe -nop -w hidden -enc <base64>"
+    }
+  },
+  {
+    "id": "TKT-0497",
+    "timestamp": "2026-10-26T04:15:17Z",
+    "source": "Elastic SIEM",
+    "category": "C2 beaconing",
+    "host": "lin-dns-01",
+    "event": "Communications régulières (toutes les 352s) détectées depuis lin-dns-01 vers IP externe",
+    "destination_ip": "91.223.82.5",
+    "destination_port": 8443,
+    "beacon_interval_s": 352
+  },
+  {
+    "id": "TKT-0498",
+    "timestamp": "2026-10-16T00:21:58Z",
+    "source": "ManageEngine ADAudit",
+    "category": "Service AD modifié",
+    "host": "SRV-DC01",
+    "user": "k.simon",
+    "event": "Modification sensible AD: membership of Domain Admins changé par k.simon",
+    "attribute_changed": "membership of Domain Admins"
+  },
+  {
+    "id": "TKT-0499",
+    "timestamp": "2026-10-31T14:14:51Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Faux positif (fichier office)",
+    "host": "WKS-COMPTA01",
+    "user": "r.thomas",
+    "event": "Document Office avec OLE légitime signalé",
+    "whitelisted_by_dsi": true
+  },
+  {
+    "id": "TKT-0500",
+    "timestamp": "2026-10-19T04:36:12Z",
+    "source": "Splunk ES",
+    "category": "Service AD modifié",
+    "host": "SRV-DC02",
+    "user": "g.rousseau",
+    "event": "Modification sensible AD: ServicePrincipalName changé par g.rousseau",
+    "attribute_changed": "ServicePrincipalName"
+  }
+]
