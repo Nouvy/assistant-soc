@@ -13,6 +13,10 @@
       --trait: #e2dcd1;
       --accent: #8a6d3b;
       --erreur: #a33a2a;
+      --haut: #a33a2a;
+      --moyen: #b07d1e;
+      --bas: #4b7a4b;
+      --flou: #8c8375;
     }
     * { box-sizing: border-box; }
     body {
@@ -86,6 +90,41 @@
       background: var(--carte); border: 1px solid var(--trait);
       border-left: 3px solid var(--accent); border-radius: 9px;
     }
+
+    /* --- Analyse du jeu de tickets --- */
+    .lot {
+      margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--trait);
+    }
+    .lot h2 { font-size: 16px; margin: 0 0 4px; }
+    .lot .aide { margin: 0 0 14px; font-size: 13px; color: var(--gris); }
+    .boutons-lot { display: flex; flex-wrap: wrap; gap: 10px; }
+    .boutons-lot button { background: var(--accent); }
+    .boutons-lot button:not(:disabled):hover { background: #755c31; }
+    #lot-etat {
+      margin: 12px 0 0; font-size: 13px; color: var(--gris);
+      font-variant-numeric: tabular-nums;
+    }
+    #lot-resultat { margin-top: 16px; }
+    .comptes { display: grid; gap: 6px; margin: 12px 0 0; }
+    .compte {
+      display: grid; grid-template-columns: 88px 1fr 64px;
+      align-items: center; gap: 10px;
+      font-size: 13px; font-variant-numeric: tabular-nums;
+    }
+    .compte .nom { font-weight: 600; letter-spacing: 0.03em; }
+    .compte .piste { height: 10px; background: #efeade; border-radius: 5px; overflow: hidden; }
+    .compte .piste span { display: block; height: 100%; border-radius: 5px; }
+    .compte .valeur { text-align: right; color: var(--gris); }
+    .compte.haut .nom { color: var(--haut); }
+    .compte.haut .piste span { background: var(--haut); }
+    .compte.moyen .nom { color: var(--moyen); }
+    .compte.moyen .piste span { background: var(--moyen); }
+    .compte.bas .nom { color: var(--bas); }
+    .compte.bas .piste span { background: var(--bas); }
+    .compte.incertain .nom { color: var(--flou); }
+    .compte.incertain .piste span { background: var(--flou); }
+    #lot-detail { margin-top: 12px; font-size: 12px; color: var(--gris); }
+
     .note { margin-top: 26px; font-size: 12px; color: var(--gris); }
     code { font-size: 12px; background: #efeade; padding: 1px 5px; border-radius: 4px; }
   </style>
@@ -124,6 +163,20 @@
     <div class="barre">
       <button id="envoyer" type="submit">Envoyer</button>
       <span id="etat" role="status" aria-live="polite"></span>
+    </div>
+
+    <div class="lot">
+      <h2>Analyse du jeu de tickets</h2>
+      <p class="aide">
+        Les 50 premiers tickets de <code>data/tickets.json</code>, un <code>POST /chat</code>
+        chacun, puis le compte par sévérité. L'avancement s'affiche ici.
+      </p>
+      <div class="boutons-lot">
+        <button type="button" class="lot-bouton" data-provider="ollama">Lancer avec phi4-mini</button>
+        <button type="button" class="lot-bouton" data-provider="gemini">Lancer avec Gemini</button>
+      </div>
+      <p id="lot-etat" role="status" aria-live="polite"></p>
+      <section id="lot-resultat" aria-live="polite" hidden></section>
     </div>
   </form>
 
@@ -197,6 +250,120 @@
       bouton.disabled = false;
     }
   });
+
+  /* --- Analyse du jeu de tickets ------------------------------------------- */
+
+  const boutonsLot = [...document.querySelectorAll('.lot-bouton')];
+  const lotEtat = document.getElementById('lot-etat');
+  const lotResultat = document.getElementById('lot-resultat');
+  const NOMS = [{ cle: 'HIGH', libelle: 'HIGH', classe: 'haut' },
+                { cle: 'MEDIUM', libelle: 'MEDIUM', classe: 'moyen' },
+                { cle: 'LOW', libelle: 'LOW', classe: 'bas' },
+                { cle: 'INCERTAIN', libelle: 'INCERTAIN', classe: 'incertain' }];
+
+  function afficherRapport(rapport, secondes) {
+    const total = rapport.analyses || 0;
+    const comptes = document.createElement('div');
+    comptes.className = 'comptes';
+    for (const niveau of NOMS) {
+      const valeur = rapport.par_severite[niveau.cle] || 0;
+      const part = total ? Math.round((valeur / total) * 100) : 0;
+
+      const ligne = document.createElement('div');
+      ligne.className = `compte ${niveau.classe}`;
+      ligne.append(
+        Object.assign(document.createElement('span'), { className: 'nom', textContent: niveau.libelle })
+      );
+
+      const piste = document.createElement('span');
+      piste.className = 'piste';
+      const barre = document.createElement('span');
+      barre.style.width = `${part}%`;
+      piste.append(barre);
+
+      const chiffre = Object.assign(document.createElement('span'), {
+        className: 'valeur', textContent: `${valeur}`,
+      });
+      ligne.append(piste, chiffre);
+      comptes.append(ligne);
+    }
+
+    const entete = Object.assign(document.createElement('div'), {
+      className: 'meta',
+      textContent: `${rapport.provider} · ${rapport.model} · ${total} tickets analysés · ${secondes} s`,
+    });
+
+    const detail = Object.assign(document.createElement('p'), {
+      id: 'lot-detail',
+      textContent: [
+        `${rapport.total} tickets parcourus`,
+        `${rapport.echecs} échec(s)`,
+        `${rapport.tokens_in} tokens entrée / ${rapport.tokens_out} sortie`,
+        rapport.fichier ? `rapport : ${rapport.fichier}` : null,
+      ].filter(Boolean).join(' · '),
+    });
+
+    lotResultat.replaceChildren(entete, comptes, detail);
+    lotResultat.hidden = false;
+  }
+
+  async function suivreLot(jobId, provider) {
+    const debut = performance.now();
+    for (;;) {
+      const reponseHttp = await fetch(`/triage/${jobId}`);
+      const donnees = await reponseHttp.json();
+      if (!reponseHttp.ok) throw new Error(donnees.detail || `HTTP ${reponseHttp.status}`);
+
+      const ecoule = ((performance.now() - debut) / 1000).toFixed(0);
+      if (donnees.etat === 'en_cours') {
+        lotEtat.textContent = donnees.total
+          ? `${donnees.faits} / ${donnees.total} tickets analysés avec ${provider} — ${ecoule} s`
+          : `Préparation de l'analyse ${provider}… — ${ecoule} s`;
+      } else if (donnees.etat === 'echec') {
+        lotEtat.textContent = '';
+        throw new Error(donnees.erreur || 'analyse interrompue');
+      } else {
+        lotEtat.textContent = `Analyse ${provider} terminée.`;
+        afficherRapport(donnees.rapport, ecoule);
+        return;
+      }
+      await new Promise((resoudre) => setTimeout(resoudre, 2000));
+    }
+  }
+
+  for (const boutonLot of boutonsLot) {
+    boutonLot.addEventListener('click', async () => {
+      const provider = boutonLot.dataset.provider;
+      const libelle = boutonLot.textContent;
+
+      boutonsLot.forEach((autre) => { autre.disabled = true; });
+      boutonLot.textContent = 'Analyse en cours…';
+      lotResultat.hidden = true;
+      lotResultat.replaceChildren();
+      erreur.style.display = 'none';
+      lotEtat.textContent = `Démarrage de l'analyse ${provider}…`;
+
+      try {
+        const reponseHttp = await fetch('/triage', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ provider }),
+        });
+        const donnees = await reponseHttp.json();
+        if (!reponseHttp.ok) {
+          throw new Error(donnees.detail || `HTTP ${reponseHttp.status}`);
+        }
+        await suivreLot(donnees.job_id, provider);
+      } catch (probleme) {
+        erreur.textContent = probleme.message;
+        erreur.style.display = 'block';
+        lotEtat.textContent = '';
+      } finally {
+        boutonsLot.forEach((autre) => { autre.disabled = false; });
+        boutonLot.textContent = libelle;
+      }
+    });
+  }
 </script>
 </body>
 </html>

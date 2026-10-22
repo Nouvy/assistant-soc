@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 
 from routers.chat import router as chat_router
+from routers.triage import router as triage_router
 
 # Un seul `.env` pour tout le projet, à la racine du dépôt (cf. AGENTS.md).
 # Chemin explicite : `uv run` s'exécute depuis `api/`, une recherche implicite
@@ -16,6 +17,7 @@ WEB_DIR = Path(__file__).resolve().parent / "static"
 
 app = FastAPI(title="assistant-soc API", version="0.1.0")
 app.include_router(chat_router)
+app.include_router(triage_router)
 
 
 @app.get("/health")
