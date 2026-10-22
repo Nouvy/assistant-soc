@@ -1,0 +1,12 @@
+{
+    "id": "TKT-0031",
+    "timestamp": "2026-10-11T12:17:48Z",
+    "source": "Microsoft Defender XDR",
+    "category": "Brute force RDP",
+    "host": "lin-ansible-01",
+    "user": "administrator",
+    "event": "719 tentatives RDP échouées en moins de 30 minutes sur lin-ansible-01",
+    "source_ip": "167.99.123.4",
+    "port": 3389,
+    "failed_attempts": 719
+  },
